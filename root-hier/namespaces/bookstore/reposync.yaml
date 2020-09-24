@@ -1,0 +1,14 @@
+# ROOT_REPO/namespaces/bookstore/reposync.yaml
+apiVersion: configsync.gke.io/v1alpha1
+kind: RepoSync
+metadata:
+  name: repo-sync
+  namespace: bookstore
+spec:
+  git:
+    repo: git@github.com:haiyanmeng/csmr-example.git
+    dir: "bookstore"
+    auth: ssh
+    secretRef:
+      name: ssh-key
+  sourceFormat: hierarchy
