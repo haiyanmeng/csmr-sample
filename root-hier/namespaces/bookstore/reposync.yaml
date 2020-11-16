@@ -6,7 +6,7 @@ metadata:
   namespace: bookstore
 spec:
   git:
-    repo: git@github.com:haiyanmeng/csmr-example.git
+    repo: git@github.com:haiyanmeng/csmr-sample.git
     dir: "bookstore"
     auth: ssh
     secretRef:
