@@ -12,4 +12,3 @@ spec:
     auth: ssh
     secretRef:
       name: git-creds
-  sourceFormat: hierarchy
