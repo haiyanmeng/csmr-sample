@@ -10,5 +10,5 @@ spec:
     dir: "bookstore"
     auth: ssh
     secretRef:
-      name: ssh-key
+      name: git-creds
   sourceFormat: hierarchy
