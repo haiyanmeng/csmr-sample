@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: nginx
   namespace: bookstore
+  owner: haiyan
 spec:
   replicas: 3
   selector:
