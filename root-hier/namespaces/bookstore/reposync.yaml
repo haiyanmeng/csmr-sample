@@ -6,8 +6,7 @@ metadata:
   namespace: bookstore
 spec:
   git:
-    repo: git@github.com:haiyanmeng/csmr-sample.git
-    dir: "bookstore"
-    auth: ssh
+    repo: git@github.com:kubernetes/kubernetes
+    branch: master
     secretRef:
       name: git-creds
