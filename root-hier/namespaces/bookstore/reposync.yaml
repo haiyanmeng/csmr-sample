@@ -8,6 +8,6 @@ spec:
   git:
     repo: git@github.com:kubernetes/kubernetes
     branch: master
-    ssh: none
+    auth: none
     secretRef:
       name: git-creds
