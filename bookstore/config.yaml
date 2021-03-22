@@ -5,6 +5,7 @@ metadata:
   namespace: bookstore
 spec:
   replicas: 3
+  minReadySeconds: 9
   selector:
     matchLabels:
       app: nginx
