@@ -6,9 +6,7 @@ metadata:
   namespace: config-management-system
 spec:
   git:
-    repo: git@github.com:haiyanmeng/csmr-sample.git
+    repo: https://github.com/haiyanmeng/csmr-sample
     dir: "root-hier"
-    auth: ssh
-    secretRef:
-      name: git-creds
+    auth: none
   sourceFormat: hierarchy
