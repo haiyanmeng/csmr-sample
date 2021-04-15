@@ -5,6 +5,7 @@ metadata:
   name: repo-sync
   namespace: bookstore
 spec:
+  sourceFormat: unstructured
   git:
     repo: https://github.com/haiyanmeng/csmr-sample
     branch: master
