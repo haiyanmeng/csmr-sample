@@ -1,0 +1,121 @@
+# config-management.yaml
+apiVersion: configmanagement.gke.io/v1
+kind: ConfigManagement
+metadata:
+  name: config-management
+spec:
+  enableMultiRepo: true
+  patches:
+  - apiVersion: v1
+    kind: ConfigMap
+    metadata:
+      labels:
+        configmanagement.gke.io/arch: csmr
+        configmanagement.gke.io/system: "true"
+      name: reconciler-manager-cm
+      namespace: config-management-system
+    data:
+      deployment.yaml: |
+        apiVersion: apps/v1
+        kind: Deployment
+        metadata:
+          name: # this field will be assigned dynamically by the reconciler-manager
+          namespace: config-management-system
+          labels:
+            app: reconciler
+            configmanagement.gke.io/system: "true"
+            configmanagement.gke.io/arch: "csmr"
+        spec:
+          minReadySeconds: 10
+          replicas: 1
+          strategy:
+            type: Recreate
+          selector:
+            matchLabels:
+              app: reconciler
+          template:
+            metadata:
+              labels:
+                app: reconciler
+            spec:
+              serviceAccountName: # this field will be assigned dynamically by the reconciler-manager
+              containers:
+              - name: reconciler
+                image: gcr.io/config-management-release/reconciler:v1.7.0-rc.5
+                command:
+                - /reconciler
+                args:
+                - "--v=0"
+                - "--git-dir=/repo/root/rev"
+                volumeMounts:
+                  - name: repo
+                    mountPath: /repo
+                    readOnly: true
+                env:
+                  - name: RECONCILER_NAME
+                    valueFrom:
+                      fieldRef:
+                        fieldPath: metadata.name
+                envFrom:
+                  - configMapRef:
+                      name: reconciler
+                  - configMapRef:
+                      name: source-format
+                      optional: true
+                resources:
+                  requests:
+                    cpu: "150m"
+                    memory: "100Mi"
+              - name: git-sync
+                image: gcr.io/config-management-release/git-sync:v3.2.2__linux_amd64
+                args: ["--root=/repo/root", "--dest=rev", "--max-sync-failures=30", "--v=5"]
+                volumeMounts:
+                - name: repo
+                  mountPath: /repo
+                - name: git-creds
+                  mountPath: /etc/git-secret
+                  readOnly: true
+                securityContext:
+                  runAsUser: 65533
+                envFrom:
+                - configMapRef:
+                    name: git-sync
+              - name: otel-agent
+                image: gcr.io/config-management-release/otelcol:v0.22.0
+                command:
+                - /otelcol
+                args:
+                - "--config=/conf/otel-agent-config.yaml"
+                resources:
+                  limits:
+                    cpu: 500m
+                    memory: 500Mi
+                  requests:
+                    cpu: 100m
+                    memory: 100Mi
+                ports:
+                - containerPort: 55678 # Default OpenCensus receiver port.
+                - containerPort: 8888  # Metrics.
+                volumeMounts:
+                - name: otel-agent-config-vol
+                  mountPath: /conf
+                livenessProbe:
+                  httpGet:
+                    path: /
+                    port: 13133 # Health Check extension default port.
+                readinessProbe:
+                  httpGet:
+                    path: /
+                    port: 13133 # Health Check extension default port.
+              volumes:
+              - name: repo
+              - name: git-creds
+                secret:
+                  secretName: git-creds
+                  defaultMode: 288
+              - name: otel-agent-config-vol
+                configMap:
+                  name: otel-agent
+              securityContext:
+                fsGroup: 65533
+
