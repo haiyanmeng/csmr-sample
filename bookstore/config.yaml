@@ -10,7 +10,7 @@ spec:
   minReadySeconds: 9
   selector:
     matchLabels:
-      app: nginx
+      app: nginx1
   template:
     metadata:
       labels:
