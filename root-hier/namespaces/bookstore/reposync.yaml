@@ -3,7 +3,7 @@ apiVersion: configsync.gke.io/v1alpha1
 kind: RepoSync
 metadata:
   name: repo-sync
-  namespace: bookstore
+  # namespace: bookstore
 spec:
   sourceFormat: unstructured
   git:
