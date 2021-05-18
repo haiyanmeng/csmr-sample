@@ -4,4 +4,3 @@ metadata:
   name: hierarchy-sa
   namespace: config-controller-system # {"$kpt-set":"management-namespace"}
 spec:
-  displayName: hierarchy-sa
