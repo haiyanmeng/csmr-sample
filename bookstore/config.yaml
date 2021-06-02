@@ -3,6 +3,8 @@ kind: Deployment
 metadata:
   name: nginx
   namespace: bookstore
+  annotations:
+    weekday: "yes"
   #annotations:
   #configmanagement.gke.io/managed: disabled
 spec:
