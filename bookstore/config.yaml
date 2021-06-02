@@ -4,7 +4,6 @@ metadata:
   name: nginx
   namespace: bookstore
   annotations:
-    weekday: "yes"
     client.lifecycle.config.k8s.io/mutation: "ignore"
     owner: "haiyan-from-configsync"
   #annotations:
