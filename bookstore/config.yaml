@@ -4,7 +4,6 @@ metadata:
   name: nginx
   namespace: bookstore
   annotations:
-    client.lifecycle.config.k8s.io/mutation: "ignore"
     owner: "aiyan"
   #annotations:
   #configmanagement.gke.io/managed: disabled
