@@ -3,4 +3,6 @@ kind: CronTab
 metadata:
   name: ct1
   namespace: bookstore
+  annotations:
+    weather: sunny
 hostbeta: "helo"
