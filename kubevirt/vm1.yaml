@@ -3,7 +3,7 @@ kind: VirtualMachine
 metadata:
   name: testvm1
   annotations:
-          #client.lifecycle.config.k8s.io/mutation: "ignore"
+    client.lifecycle.config.k8s.io/mutation: "ignore"
 spec:
   running: false
   template:
