@@ -6,7 +6,7 @@ metadata:
   annotations:
     ann-kubectl: dwd
     owner: "aiyan"
-    configmanagement.gke.io/managed: disabled
+    #configmanagement.gke.io/managed: disabled
     #client.lifecycle.config.k8s.io/mutation: "ignore"
   #annotations:
   #configmanagement.gke.io/managed: disabled
