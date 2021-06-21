@@ -10,4 +10,4 @@ spec:
     repo: https://github.com/haiyanmeng/csmr-sample
     branch: master
     dir: bookstore
-    auth: none
+    auth: ssh

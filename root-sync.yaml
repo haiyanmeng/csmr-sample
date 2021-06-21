@@ -8,5 +8,7 @@ spec:
   git:
     repo: https://github.com/haiyanmeng/csmr-sample
     dir: "root-hier"
-    auth: none
+    auth: ssh
+    secretRef:
+      name: git-creds
   sourceFormat: hierarchy
