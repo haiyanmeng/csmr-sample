@@ -11,3 +11,5 @@ spec:
     branch: master
     dir: bookstore
     auth: ssh
+    secretRef:
+      name: git-creds
