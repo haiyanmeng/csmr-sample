@@ -6,3 +6,4 @@ metadata:
   annotations:
     weather: sunny
 host: "helo"
+port: "1"
