@@ -5,4 +5,4 @@ metadata:
   namespace: bookstore
   annotations:
     weather: sunny
-hostbeta: "helo"
+host: "helo"

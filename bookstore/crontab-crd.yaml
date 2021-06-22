@@ -18,7 +18,7 @@ spec:
       openAPIV3Schema:
         type: object
         properties:
-          hostbeta:
+          host:
             type: string
           port:
             type: string
