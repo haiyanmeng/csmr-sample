@@ -41,7 +41,7 @@ spec:
               serviceAccountName: # this field will be assigned dynamically by the reconciler-manager
               containers:
               - name: reconciler
-                image: gcr.io/config-management-release/reconciler:v1.7.0-rc.5
+                image: gcr.io/stolos-dev/haiyanmeng/1621536813/reconciler:latest
                 command:
                 - /reconciler
                 args:
@@ -63,6 +63,9 @@ spec:
                       name: source-format
                       optional: true
                 resources:
+                  limits:
+                    cpu: "1"
+                    memory: "300Mi"
                   requests:
                     cpu: "150m"
                     memory: "100Mi"
@@ -77,6 +80,9 @@ spec:
                   readOnly: true
                 securityContext:
                   runAsUser: 65533
+                env:
+                  - name: GIT_SYNC_WAIT
+                    value: "25.000000"
                 envFrom:
                 - configMapRef:
                     name: git-sync
@@ -118,4 +124,3 @@ spec:
                   name: otel-agent
               securityContext:
                 fsGroup: 65533
-

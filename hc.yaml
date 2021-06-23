@@ -1,0 +1,16 @@
+# config-management.yaml
+apiVersion: configmanagement.gke.io/v1
+kind: ConfigManagement
+metadata:
+  name: config-management
+spec:
+  ConfigSyncPodResources: {}
+  git:
+    proxy: {}
+    secretType: none
+    syncBranch: main
+    syncRepo: https://github.com/yiqigao217/CSunstructure.git
+    syncWait: 1
+  hierarchyController:
+    enabled: true
+  sourceFormat: unstructured

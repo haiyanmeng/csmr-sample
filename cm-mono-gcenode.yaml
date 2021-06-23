@@ -1,0 +1,12 @@
+# config-management.yaml
+apiVersion: configmanagement.gke.io/v1
+kind: ConfigManagement
+metadata:
+  name: config-management
+spec:
+  git:
+    syncRepo: https://source.developers.google.com/p/haiyanmeng-anthos/r/csmr-sample
+    policyDir: "bookstore"
+    secretType: gcenode
+    auth: 
+  sourceFormat: unstructured

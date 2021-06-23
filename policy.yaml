@@ -1,0 +1,9 @@
+apiVersion: configmanagement.gke.io/v1
+kind: ConfigManagement
+metadata:
+  name: config-management
+spec:
+  enableMultiRepo: true
+  # Set to true to install and enable Policy Controller
+  policyController:
+    enabled: true
