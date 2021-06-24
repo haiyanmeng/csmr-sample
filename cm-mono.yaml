@@ -4,8 +4,8 @@ kind: ConfigManagement
 metadata:
   name: config-management
 spec:
+  clusterName: cluster-3
   git:
     syncRepo: https://github.com/haiyanmeng/csmr-sample
-    policyDir: "bookstore"
+    policyDir: "crd"
     secretType: none
-  sourceFormat: unstructured

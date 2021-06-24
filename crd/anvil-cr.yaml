@@ -1,0 +1,7 @@
+apiVersion: acme.com/v1
+kind: Anvil
+metadata:
+  name: anvil1
+  namespace: default
+spec:
+  lbs: 5

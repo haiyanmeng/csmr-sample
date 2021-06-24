@@ -4,4 +4,5 @@ kind: ConfigManagement
 metadata:
   name: config-management
 spec:
+  clusterName: cluster-3
   enableMultiRepo: true
