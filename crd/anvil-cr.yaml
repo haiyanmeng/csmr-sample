@@ -4,4 +4,4 @@ metadata:
   name: anvil1
   namespace: default
 spec:
-  lbs: 5
+  lbs: 99
