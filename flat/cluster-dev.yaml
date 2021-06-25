@@ -1,7 +1,7 @@
 kind: Cluster
 apiVersion: clusterregistry.k8s.io/v1alpha1
 metadata:
-  name: cluster-3
+  name: cluster-8
   labels:
-    cluster: cluster-3
+    cluster: cluster-8
     environment: dev
