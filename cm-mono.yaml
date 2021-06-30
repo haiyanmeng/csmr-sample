@@ -8,5 +8,5 @@ spec:
   sourceFormat: unstructured
   git:
     syncRepo: https://github.com/haiyanmeng/csmr-sample
-    policyDir: "crd"
+    policyDir: "cluster-dev"
     secretType: none
