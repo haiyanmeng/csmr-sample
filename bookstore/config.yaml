@@ -25,6 +25,7 @@ spec:
       containers:
       - image: nginx:1.7.9
         name: nginx
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80
           protocol: TCP
