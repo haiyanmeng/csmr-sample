@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx1
+  namespace: bookstore
+  annotations:
+    ann-kubectl: dwd
+    owner: "aiyan"
+    hello: "true"
+    #configmanagement.gke.io/managed: disabled
+    #client.lifecycle.config.k8s.io/mutation: ignore
+  #annotations:
+  #configmanagement.gke.io/managed: disabled
+spec:
+  replicas: 1
+  minReadySeconds: 9
+  selector:
+    matchLabels:
+      app: nginx1
+  template:
+    metadata:
+      labels:
+        app: nginx1
+    spec:
+      containers:
+      - image: nginx:1.7.9
+        name: nginx
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 80
+          protocol: TCP
