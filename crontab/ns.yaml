@@ -1,10 +1,4 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  annotations:
-    configmanagement.gke.io/managed: enabled
-    configsync.gke.io/manager: :root
-    configsync.gke.io/resource-id: _namespace_ns1
-  labels:
-    app.kubernetes.io/managed-by: configmanagement.gke.io
-  name: ns1
+  name: bookstore
