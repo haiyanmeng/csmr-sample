@@ -5,7 +5,6 @@ metadata:
   namespace: bookstore
   annotations:
     ann-kubectl: dwd
-    owner: "aiyan"
     hello: "true"
     #configmanagement.gke.io/managed: disabled
     #client.lifecycle.config.k8s.io/mutation: ignore
