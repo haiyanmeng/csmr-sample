@@ -3,13 +3,6 @@ kind: Deployment
 metadata:
   name: nginx
   namespace: bookstore
-  annotations:
-    ann-kubectl: dwd
-    hello: "true"
-    #configmanagement.gke.io/managed: disabled
-    #client.lifecycle.config.k8s.io/mutation: ignore
-  #annotations:
-  #configmanagement.gke.io/managed: disabled
 spec:
   replicas: 1
   minReadySeconds: 9
