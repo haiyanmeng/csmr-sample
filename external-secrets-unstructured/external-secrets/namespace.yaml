@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: "external-secrets"
+  # annotations:
+  #   configmanagement.gke.io/cluster-selector: store-3-1-selector
+  labels:
+    created-by: root-configuration

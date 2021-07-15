@@ -7,6 +7,6 @@ metadata:
 spec:
   git:
     repo: https://github.com/haiyanmeng/csmr-sample
-    dir: flat
+    dir: bookstore
     auth: none
   sourceFormat: unstructured

@@ -1,0 +1,14 @@
+# set-image-pull-policy.yaml
+apiVersion: mutations.gatekeeper.sh/v1alpha1
+kind: Assign
+metadata:
+  name: set-revision-history-limit
+spec:
+  applyTo:
+  - groups: ["apps"]
+    kinds: ["Deployment"]
+    versions: ["v1"]
+  location: "spec.revisionHistoryLimit"
+  parameters:
+    assign:
+      value: 25

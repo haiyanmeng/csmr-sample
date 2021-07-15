@@ -1,0 +1,56 @@
+# Source: kubernetes-external-secrets/templates/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: v2-external-secrets
+  namespace: "external-secrets"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: kubernetes-external-secrets
+      app.kubernetes.io/instance: v1
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: kubernetes-external-secrets
+        app.kubernetes.io/instance: v1
+    spec:
+      serviceAccountName: v1-kubernetes-external-secrets
+      containers:
+        - name: kubernetes-external-secrets
+          image: "godaddy/kubernetes-external-secrets:6.0.0"
+          ports:
+          - name: prometheus
+            containerPort: 3001
+          imagePullPolicy: IfNotPresent
+          resources:
+            {}
+          env:
+          - name: "GOOGLE_APPLICATION_CREDENTIALS"
+            value: "/app/gcp-creds/external-secrets-k8s-creds.json"
+          - name: "LOG_LEVEL"
+            value: "info"
+          - name: "LOG_MESSAGE_KEY"
+            value: "message"
+          - name: "METRICS_PORT"
+            value: "3001"
+          - name: "POLLER_INTERVAL_MILLISECONDS"
+            value: "10000"
+          # Params for env vars populated from k8s secrets
+          volumeMounts:
+          - name: gcp-creds
+            mountPath: /app/gcp-creds
+            readOnly: true
+      securityContext:
+        runAsNonRoot: true
+      volumes:
+      - name: gcp-creds
+        secret:
+          secretName: gcp-creds # Created during ABM Software install
+
+# Steps to create the `gcp-creds` secret:
+# First, create a GSA with the following permissions: Secret Manager Secret Accessor and Secret Manager Viewer;
+# Second, download the key into a json file;
+# Third, create the secret:
+# kubectl create secret generic gcp-creds --from-file=/usr/local/google/home/haiyanmeng/haiyanmeng-anthos-b93f8c8d98b2.json -n external-secrets || true

@@ -1,0 +1,13 @@
+applySpecVersion: 1
+spec:
+  configSync:
+    enabled: true
+    sourceFormat: hierarchy
+    #syncRepo: https://source.developers.google.com/p/haiyanmeng-anthos/r/csmr-sample
+    syncRepo: https://source.developers.google.com/p/anthos-bare-metal-lab-1/r/root-repo-usa-market
+    syncBranch: test
+    secretType: gcpserviceaccount
+    gcpServiceAccountEmail: anthos-config-management@haiyanmeng-anthos.iam.gserviceaccount.com
+    policyDir: config
+  policyController:
+    enabled: false

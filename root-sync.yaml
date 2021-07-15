@@ -7,9 +7,7 @@ metadata:
 spec:
   git:
     repo: https://github.com/haiyanmeng/csmr-sample
-    dir: flat
-    auth: ssh
-    secretRef:
-      name: git-creds
-  sourceFormat: unstructured
-  #sourceFormat: hierarchy
+    dir: root-hier
+    auth: none
+    #sourceFormat: unstructured
+  sourceFormat: hierarchy
