@@ -7,7 +7,7 @@ metadata:
 spec:
   git:
     repo: https://github.com/haiyanmeng/csmr-sample
-    dir: root-hier
+    dir: defaultcluster
     auth: none
     #sourceFormat: unstructured
   sourceFormat: hierarchy
