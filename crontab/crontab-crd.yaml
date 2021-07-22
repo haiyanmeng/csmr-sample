@@ -31,6 +31,9 @@ spec:
             type: string
           bar:
             type: string
+          zzz:
+            type: string
+  - name: v1
   - name: v1
     served: true
     storage: true
