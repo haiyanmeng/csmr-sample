@@ -33,6 +33,8 @@ spec:
             type: string
           zzz:
             type: string
+          xxx:
+            type: string
   - name: v1
     served: true
     storage: false
