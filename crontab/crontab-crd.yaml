@@ -27,6 +27,8 @@ spec:
             type: string
           gender:
             type: string
+          foo:
+            type: string
   - name: v1
     served: true
     storage: true
