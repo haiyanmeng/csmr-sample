@@ -23,6 +23,8 @@ spec:
             type: string
           port:
             type: string
+          name:
+            type: string
   - name: v1
     served: true
     storage: true

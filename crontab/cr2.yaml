@@ -7,3 +7,4 @@ metadata:
     weather: "sunny"
 host: "local"
 port: "12"
+name: "lolo"
