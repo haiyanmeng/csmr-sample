@@ -7,7 +7,6 @@ metadata:
 spec:
   sourceFormat: unstructured
   override:
-    containers:
   git:
     repo: https://github.com/haiyanmeng/csmr-sample
     branch: master
