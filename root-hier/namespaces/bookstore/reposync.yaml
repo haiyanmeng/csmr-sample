@@ -8,9 +8,6 @@ spec:
   sourceFormat: unstructured
   override:
     containers:
-      - name: reconciler
-        cpuLimit: "1500m"
-        memoryLimit: "843Mi"
   git:
     repo: https://github.com/haiyanmeng/csmr-sample
     branch: master
