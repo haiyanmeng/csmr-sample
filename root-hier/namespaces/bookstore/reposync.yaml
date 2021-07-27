@@ -6,6 +6,7 @@ metadata:
   # namespace: bookstore
 spec:
   sourceFormat: unstructured
+  override: {}
   git:
     repo: https://github.com/haiyanmeng/csmr-sample
     branch: master
