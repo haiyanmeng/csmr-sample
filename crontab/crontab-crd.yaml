@@ -27,27 +27,7 @@ spec:
             type: string
           gender:
             type: string
-          foo:
-            type: string
-          bar:
-            type: string
-          zzz:
-            type: string
-          xxx:
-            type: string
           aa:
-            type: string
-  - name: v1
-    served: true
-    storage: false
-    schema:
-      openAPIV3Schema:
-        type: object
-        # x-kubernetes-preserve-unknown-fields: true
-        properties:
-          host:
-            type: string
-          port:
             type: string
   # The conversion section is introduced in Kubernetes 1.13+ with a default value of
   # None conversion (strategy sub-field set to None).
