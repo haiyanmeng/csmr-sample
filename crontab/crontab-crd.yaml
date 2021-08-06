@@ -3,6 +3,8 @@ kind: CustomResourceDefinition
 metadata:
   # name must match the spec fields below, and be in the form: <plural>.<group>
   name: crontabs.example.com
+  annotations:
+    configmanagement.gke.io/managed: disabled
 spec:
   # group name to use for REST API: /apis/<group>/<version>
   group: example.com
@@ -36,6 +38,8 @@ spec:
           dd:
             type: string
           ee:
+            type: string
+          ff:
             type: string
   # The conversion section is introduced in Kubernetes 1.13+ with a default value of
   # None conversion (strategy sub-field set to None).
