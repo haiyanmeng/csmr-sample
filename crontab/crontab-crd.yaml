@@ -37,6 +37,8 @@ spec:
             type: string
           dd:
             type: string
+          ee:
+            type: string
   # The conversion section is introduced in Kubernetes 1.13+ with a default value of
   # None conversion (strategy sub-field set to None).
   conversion:
