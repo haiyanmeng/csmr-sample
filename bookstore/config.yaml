@@ -4,7 +4,7 @@ metadata:
   name: nginx
   namespace: bookstore
   annotations:
-    client.lifecycle.config.k8s.io/mutation: ignore
+          #client.lifecycle.config.k8s.io/mutation: ignore
 spec:
   replicas: 1
   minReadySeconds: 9
