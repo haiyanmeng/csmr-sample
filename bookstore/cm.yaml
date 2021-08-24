@@ -3,4 +3,3 @@ kind: ConfigMap
 metadata:
   name: cm1
   namespace: bookstore
-data1: dd
