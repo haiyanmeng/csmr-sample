@@ -1,0 +1,26 @@
+I0827 21:44:00.548198       1 setup.go:15] Build Version: 
+I0827 21:44:00.550448       1 main.go:161] Starting reconciler for: root
+I0827 21:44:07.645456       1 run.go:238] New git changes (/repo/source/b6be7c9de176101ab39021490f9520033a33174b/crontab) detected, reset the cache
+I0827 21:44:07.645700       1 git.go:71] Reading updated configs dir: /repo/source/b6be7c9de176101ab39021490f9520033a33174b/crontab
+I0827 21:44:07.967953       1 root.go:92] Parsing files from git dir: /repo/source/b6be7c9de176101ab39021490f9520033a33174b/crontab
+I0827 21:44:09.911789       1 request.go:655] Throttling request took 1.164163885s, request: GET:https://10.48.16.1:443/apis/configsync.gke.io/v1beta1?timeout=32s
+I0827 21:44:09.964348       1 kpt_applier.go:220] The applier made new progress: ApplyEvent events (OpType: ServersideApplied): 3.
+I0827 21:44:09.964802       1 manager.go:158] The remediator made new progress: started 3 new watches, and stopped 0 watches
+I0827 21:44:09.965157       1 filteredwatcher.go:172] Watch started for /v1, Kind=Namespace
+I0827 21:44:09.965490       1 filteredwatcher.go:172] Watch started for apiextensions.k8s.io/v1, Kind=CustomResourceDefinition
+I0827 21:44:09.965728       1 filteredwatcher.go:172] Watch started for example.com/v1beta1, Kind=CronTab
+I0827 21:44:09.966872       1 filteredwatcher.go:191] (Re)starting watch for /v1, Kind=Namespace at resource version ""
+I0827 21:44:09.967340       1 filteredwatcher.go:191] (Re)starting watch for apiextensions.k8s.io/v1, Kind=CustomResourceDefinition at resource version ""
+I0827 21:44:09.967680       1 filteredwatcher.go:191] (Re)starting watch for example.com/v1beta1, Kind=CronTab at resource version ""
+I0827 21:44:09.980399       1 state.go:57] Reconciler checkpoint updated to /repo/source/b6be7c9de176101ab39021490f9520033a33174b/crontab
+I0827 21:45:37.643698       1 run.go:238] New git changes (/repo/source/d10c44765231dc69d1e2bb388849f76d0d25ec38/crontab) detected, reset the cache
+I0827 21:45:37.643744       1 git.go:71] Reading updated configs dir: /repo/source/d10c44765231dc69d1e2bb388849f76d0d25ec38/crontab
+I0827 21:45:37.699146       1 root.go:92] Parsing files from git dir: /repo/source/d10c44765231dc69d1e2bb388849f76d0d25ec38/crontab
+I0827 21:45:37.701506       1 declared_field_hydrator.go:53] Got error from encoding declared fields. It might be due to an out of date schemas. Refreshing the schemas from the discovery client
+I0827 21:45:39.854182       1 filteredwatcher.go:220] Ending watch for example.com/v1beta1, Kind=CronTab at resource version "3929131" (total events: 2, ignored events: 0)
+I0827 21:45:39.856407       1 filteredwatcher.go:191] (Re)starting watch for example.com/v1beta1, Kind=CronTab at resource version "3929131"
+I0827 21:45:39.857189       1 filteredwatcher.go:201] Watch for example.com/v1beta1, Kind=CronTab at resource version "3929131" closed with: too old resource version: 3929131 (3929338)
+I0827 21:45:39.859912       1 filteredwatcher.go:220] Ending watch for example.com/v1beta1, Kind=CronTab at resource version "" (total events: 1, ignored events: 0)
+I0827 21:45:39.862608       1 filteredwatcher.go:191] (Re)starting watch for example.com/v1beta1, Kind=CronTab at resource version ""
+I0827 21:45:41.325363       1 kpt_applier.go:220] The applier made new progress: ApplyEvent events (OpType: ServersideApplied): 3.
+I0827 21:45:41.339767       1 state.go:57] Reconciler checkpoint updated to /repo/source/d10c44765231dc69d1e2bb388849f76d0d25ec38/crontab
