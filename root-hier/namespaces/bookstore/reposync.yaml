@@ -6,6 +6,13 @@ metadata:
   # namespace: bookstore
 spec:
   sourceFormat: unstructured
+  override:
+    resources:
+    - containerName: "reconciler"
+      cpuLimit: "888m"
+      memoryLimit: "444Mi"
+    - containerName: "git-sync"
+      memoryLimit: "333Mi"
   git:
     repo: https://github.com/haiyanmeng/csmr-sample
     branch: master
