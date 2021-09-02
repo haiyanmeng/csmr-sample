@@ -24,6 +24,9 @@ spec:
                 type: string
               image:
                 type: string
+              # Add a new field in the CRD
+              extra:
+                type: string
   # either Namespaced or Cluster
   scope: Namespaced
   names:
