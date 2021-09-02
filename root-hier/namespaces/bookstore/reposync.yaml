@@ -17,6 +17,6 @@ spec:
     repo: https://github.com/haiyanmeng/csmr-sample
     branch: master
     dir: bookstore
-    auth: ssh
-    secretRef:
-      name: git-creds
+    auth: none
+    #secretRef:
+    #name: git-creds
