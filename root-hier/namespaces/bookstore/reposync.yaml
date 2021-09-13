@@ -1,0 +1,15 @@
+# ROOT_REPO/namespaces/bookstore/reposync.yaml
+apiVersion: configsync.gke.io/v1alpha1
+kind: RepoSync
+metadata:
+  name: repo-sync
+  # namespace: bookstore
+spec:
+  sourceFormat: unstructured
+  git:
+    repo: https://github.com/haiyanmeng/csmr-sample
+    branch: master
+    dir: bookstore
+    auth: none
+    #secretRef:
+    #name: git-creds
