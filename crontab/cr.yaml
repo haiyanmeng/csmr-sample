@@ -5,6 +5,7 @@ metadata:
   namespace: bookstore
   annotations:
     weather: "sunny"
+    dfd: dfd
 host: "local"
 port: "12"
 name: "lolo"
