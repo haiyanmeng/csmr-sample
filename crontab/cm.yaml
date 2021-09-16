@@ -4,4 +4,4 @@ metadata:
   name: cm1
   namespace: bookstore
   annotations:
-    configmanagment.gke.io/managed: enabled
+    configmanagement.gke.io/managed: enabled
