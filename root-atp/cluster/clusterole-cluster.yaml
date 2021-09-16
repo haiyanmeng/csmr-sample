@@ -1,9 +1,0 @@
-kind: ClusterRole
-apiVersion: rbac.authorization.k8s.io/v1
-metadata:
-  name: test-under-cluster
-rules:
-- apiGroups: ["configsync.gke.io"]
-  resources: ["reposyncs"]
-  verbs:
-  - "*"
