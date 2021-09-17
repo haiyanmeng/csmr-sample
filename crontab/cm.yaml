@@ -3,5 +3,3 @@ kind: ConfigMap
 metadata:
   name: cm1
   namespace: bookstore
-  annotations:
-    configmanagement.gke.io/managed: enabled
