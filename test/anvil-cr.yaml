@@ -1,7 +1,0 @@
-apiVersion: acme.com/v1
-kind: Anvil
-metadata:
-  name: cr1
-  namespace: default
-spec:
-  lbs: 5
