@@ -1,0 +1,118 @@
+apiVersion: v1
+items:
+- apiVersion: configsync.gke.io/v1beta1
+  kind: RootSync
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"configsync.gke.io/v1alpha1","kind":"RootSync","metadata":{"annotations":{},"creationTimestamp":null,"labels":{"configmanagement.gke.io/configmanagement":"config-management","k8s-app":"kubernetes-config-management"},"name":"root-sync","namespace":"config-management-system","ownerReferences":[{"apiVersion":"configmanagement.gke.io/v1","blockOwnerDeletion":true,"controller":true,"kind":"ConfigManagement","name":"config-management","uid":"6b361ea5-789b-463c-ac87-920c952eda79"}]},"spec":{"git":{"auth":"none","branch":"master","dir":"bookstore","period":"15s","repo":"https://github.com/haiyanmeng/csmr-sample","revision":"HEAD","secretRef":{}},"sourceFormat":"unstructured"},"status":{"source":{"gitStatus":{"dir":"","repo":"","revision":""}},"sync":{"lastUpdate":null}}}
+    creationTimestamp: "2021-10-01T19:36:50Z"
+    generation: 3
+    labels:
+      configmanagement.gke.io/configmanagement: config-management
+      k8s-app: kubernetes-config-management
+    managedFields:
+    - apiVersion: configsync.gke.io/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+          f:labels:
+            .: {}
+            f:configmanagement.gke.io/configmanagement: {}
+            f:k8s-app: {}
+          f:ownerReferences: {}
+        f:spec:
+          .: {}
+          f:git:
+            .: {}
+            f:auth: {}
+            f:branch: {}
+            f:dir: {}
+            f:period: {}
+            f:repo: {}
+            f:revision: {}
+            f:secretRef: {}
+          f:sourceFormat: {}
+        f:status:
+          f:source:
+            f:gitStatus:
+              f:dir: {}
+              f:repo: {}
+              f:revision: {}
+      manager: Go-http-client
+      operation: Update
+      time: "2021-10-01T19:39:40Z"
+    - apiVersion: configsync.gke.io/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:spec:
+          f:override: {}
+        f:status:
+          f:conditions: {}
+          f:observedGeneration: {}
+      manager: reconciler-manager
+      operation: Update
+      time: "2021-10-01T19:39:40Z"
+    name: root-sync
+    namespace: config-management-system
+    ownerReferences:
+    - apiVersion: configmanagement.gke.io/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ConfigManagement
+      name: config-management
+      uid: 6b361ea5-789b-463c-ac87-920c952eda79
+    resourceVersion: "9701882"
+    uid: 7f66c954-791a-4070-8907-c4deed6ed2f2
+  spec:
+    git:
+      auth: none
+      branch: master
+      dir: bookstore
+      period: 15s
+      repo: https://github.com/haiyanmeng/csmr-sample
+      revision: HEAD
+      secretRef: {}
+    sourceFormat: unstructured
+  status:
+    conditions:
+    - lastTransitionTime: "2021-10-01T19:39:38Z"
+      lastUpdateTime: "2021-10-01T19:39:40Z"
+      message: 'Available: 0/1'
+      reason: Deployment
+      status: "True"
+      type: Reconciling
+    observedGeneration: 3
+    reconciler: root-reconciler
+    rendering:
+      commit: 9ccd9accf3f8f68a669ab8977a9c0f4221a36ba1
+      gitStatus:
+        branch: master
+        dir: bookstore
+        repo: https://github.com/haiyanmeng/csmr-sample
+        revision: HEAD
+      lastUpdate: "2021-10-01T19:37:12Z"
+      message: Rendering skipped
+    source:
+      commit: 9ccd9accf3f8f68a669ab8977a9c0f4221a36ba1
+      gitStatus:
+        branch: master
+        dir: bookstore
+        repo: https://github.com/haiyanmeng/csmr-sample
+        revision: HEAD
+      lastUpdate: "2021-10-01T19:37:15Z"
+    sync:
+      commit: 9ccd9accf3f8f68a669ab8977a9c0f4221a36ba1
+      gitStatus:
+        branch: master
+        dir: bookstore
+        repo: https://github.com/haiyanmeng/csmr-sample
+        revision: HEAD
+      lastUpdate: "2021-10-01T19:37:15Z"
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""

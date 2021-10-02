@@ -4,8 +4,10 @@ kind: ConfigManagement
 metadata:
   name: config-management
 spec:
+  enableMultiRepo: true
+  enableLegacyFields: true
+  sourceFormat: unstructured
   git:
     syncRepo: https://github.com/haiyanmeng/csmr-sample
     policyDir: "bookstore"
     secretType: none
-  sourceFormat: unstructured

@@ -5,8 +5,8 @@ metadata:
   name: root-sync
   namespace: config-management-system
 spec:
+  sourceFormat: unstructured
   git:
     repo: https://github.com/haiyanmeng/csmr-sample
-    dir: bookstore
+    dir: crontab
     auth: none
-  sourceFormat: unstructured

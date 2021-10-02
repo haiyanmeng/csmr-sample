@@ -1,0 +1,17 @@
+# root-sync.yaml
+apiVersion: configsync.gke.io/v1alpha1
+kind: RootSync
+metadata:
+  name: root-sync
+  namespace: config-management-system
+spec:
+  git:
+    repo: ssh://haiyanmeng@google.com@source.developers.google.com:2022/p/haiyanmeng-gke-322517/r/csmr-sample
+          #repo: https://source.developers.google.com/p/haiyanmeng-gke-322517/r/csmr-sample
+    branch: master
+    dir: "/bookstore"
+    auth: ssh
+    secretRef:
+      name: git-creds
+  sourceFormat: unstructured
+  #sourceFormat: hierarchy

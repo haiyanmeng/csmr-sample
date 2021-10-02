@@ -1,0 +1,386 @@
+I1001 22:05:07.334172       1 setup.go:15] Build Version: 
+I1001 22:05:07.366010       1 main.go:161] Starting reconciler for: root
+I1001 22:05:16.413293       1 run.go:238] New git changes (/repo/source/53dbd5251cb07e95ca2d5f21bc05a1df7b23dbe9) detected, reset the cache
+I1001 22:05:16.413320       1 git.go:72] Reading updated configs dir: /repo/source/53dbd5251cb07e95ca2d5f21bc05a1df7b23dbe9
+I1001 22:05:17.212452       1 root.go:92] Parsing files from git dir: /repo/source/53dbd5251cb07e95ca2d5f21bc05a1df7b23dbe9
+I1001 22:05:19.253884       1 cache.go:107] Skip sending 1 unknown-scoped objects to the applier: [kubevirt.io_virtualmachine_vm_testvm]
+I1001 22:05:19.283364       1 kpt_applier.go:170] time to call NewFactory: 5.232µs
+I1001 22:05:19.284017       1 kpt_applier.go:178] time to call ToRESTMapper: 614.767µs
+I1001 22:05:19.284138       1 kpt_applier.go:195] 12 objects to be applied: [_namespace_kubevirt _namespace_vm _serviceaccount_kubevirt_kubevirt-operator apiextensions.k8s.io_customresourcedefinition_kubevirts.kubevirt.io apps_deployment_kubevirt_virt-operator kubevirt.io_kubevirt_kubevirt_kubevirt rbac.authorization.k8s.io_clusterrole_kubevirt-operator rbac.authorization.k8s.io_clusterrole_kubevirt.io:operator rbac.authorization.k8s.io_clusterrolebinding_kubevirt-operator rbac.authorization.k8s.io_role_kubevirt_kubevirt-operator rbac.authorization.k8s.io_rolebinding_kubevirt_kubevirt-operator-rolebinding scheduling.k8s.io_priorityclass_kubevirt-cluster-critical]
+I1001 22:05:19.289111       1 kpt_applier.go:214] obj: _namespace_kubevirt
+I1001 22:05:19.289142       1 kpt_applier.go:214] obj: _namespace_vm
+I1001 22:05:19.289151       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_clusterrole_kubevirt-operator
+I1001 22:05:19.289159       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_clusterrole_kubevirt.io:operator
+I1001 22:05:19.289167       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_clusterrolebinding_kubevirt-operator
+I1001 22:05:19.289192       1 kpt_applier.go:214] obj: apiextensions.k8s.io_customresourcedefinition_kubevirts.kubevirt.io
+I1001 22:05:19.289203       1 kpt_applier.go:214] obj: scheduling.k8s.io_priorityclass_kubevirt-cluster-critical
+I1001 22:05:19.289215       1 kpt_applier.go:214] obj: apps_deployment_kubevirt_virt-operator
+I1001 22:05:19.289225       1 kpt_applier.go:214] obj: kubevirt.io_kubevirt_kubevirt_kubevirt
+I1001 22:05:19.289240       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_role_kubevirt_kubevirt-operator
+I1001 22:05:19.289255       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_rolebinding_kubevirt_kubevirt-operator-rolebinding
+I1001 22:05:19.289286       1 kpt_applier.go:214] obj: _serviceaccount_kubevirt_kubevirt-operator
+I1001 22:05:19.413583       1 kpt_applier.go:125] applied [op: ServersideApplied] resource ClusterRole.rbac.authorization.k8s.io, /kubevirt.io:operator
+I1001 22:05:19.473915       1 kpt_applier.go:125] applied [op: ServersideApplied] resource Namespace, /kubevirt
+I1001 22:05:19.599174       1 kpt_applier.go:125] applied [op: ServersideApplied] resource ClusterRole.rbac.authorization.k8s.io, /kubevirt-operator
+I1001 22:05:19.680730       1 kpt_applier.go:125] applied [op: ServersideApplied] resource ClusterRoleBinding.rbac.authorization.k8s.io, /kubevirt-operator
+I1001 22:05:19.718259       1 kpt_applier.go:125] applied [op: ServersideApplied] resource PriorityClass.scheduling.k8s.io, /kubevirt-cluster-critical
+I1001 22:05:19.746407       1 kpt_applier.go:125] applied [op: ServersideApplied] resource Namespace, /vm
+I1001 22:05:19.993338       1 kpt_applier.go:125] applied [op: ServersideApplied] resource CustomResourceDefinition.apiextensions.k8s.io, /kubevirts.kubevirt.io
+I1001 22:05:23.221919       1 kpt_applier.go:125] applied [op: ServersideApplied] resource ServiceAccount, kubevirt/kubevirt-operator
+I1001 22:05:23.250959       1 kpt_applier.go:125] applied [op: ServersideApplied] resource Role.rbac.authorization.k8s.io, kubevirt/kubevirt-operator
+I1001 22:05:23.275937       1 kpt_applier.go:125] applied [op: ServersideApplied] resource Deployment.apps, kubevirt/virt-operator
+I1001 22:05:23.303038       1 kpt_applier.go:125] applied [op: ServersideApplied] resource KubeVirt.kubevirt.io, kubevirt/kubevirt
+I1001 22:05:23.389966       1 kpt_applier.go:125] applied [op: ServersideApplied] resource RoleBinding.rbac.authorization.k8s.io, kubevirt/kubevirt-operator-rolebinding
+I1001 22:05:25.392622       1 kpt_applier.go:247] The applier made new progress: ApplyEvent events (OpType: ServersideApplied): 12, ErrorType events: 1.
+I1001 22:05:25.393250       1 filteredwatcher.go:172] Watch started for rbac.authorization.k8s.io/v1, Kind=Role
+I1001 22:05:25.394255       1 filteredwatcher.go:172] Watch started for /v1, Kind=Namespace
+I1001 22:05:25.394623       1 manager.go:158] The remediator made new progress: started 10 new watches, and stopped 0 watches
+I1001 22:05:25.395045       1 filteredwatcher.go:172] Watch started for /v1, Kind=ServiceAccount
+I1001 22:05:25.395448       1 filteredwatcher.go:172] Watch started for rbac.authorization.k8s.io/v1, Kind=RoleBinding
+I1001 22:05:25.395657       1 filteredwatcher.go:172] Watch started for rbac.authorization.k8s.io/v1, Kind=ClusterRole
+I1001 22:05:25.395951       1 filteredwatcher.go:172] Watch started for apiextensions.k8s.io/v1, Kind=CustomResourceDefinition
+I1001 22:05:25.396253       1 filteredwatcher.go:172] Watch started for rbac.authorization.k8s.io/v1, Kind=ClusterRoleBinding
+I1001 22:05:25.396621       1 filteredwatcher.go:172] Watch started for scheduling.k8s.io/v1, Kind=PriorityClass
+I1001 22:05:25.397013       1 filteredwatcher.go:172] Watch started for apps/v1, Kind=Deployment
+I1001 22:05:25.397278       1 filteredwatcher.go:172] Watch started for kubevirt.io/v1, Kind=KubeVirt
+I1001 22:05:25.433872       1 filteredwatcher.go:191] (Re)starting watch for scheduling.k8s.io/v1, Kind=PriorityClass at resource version ""
+I1001 22:05:25.433962       1 filteredwatcher.go:191] (Re)starting watch for rbac.authorization.k8s.io/v1, Kind=Role at resource version ""
+I1001 22:05:25.434400       1 filteredwatcher.go:191] (Re)starting watch for /v1, Kind=Namespace at resource version ""
+I1001 22:05:25.434570       1 filteredwatcher.go:191] (Re)starting watch for /v1, Kind=ServiceAccount at resource version ""
+I1001 22:05:25.434883       1 filteredwatcher.go:191] (Re)starting watch for rbac.authorization.k8s.io/v1, Kind=ClusterRoleBinding at resource version ""
+I1001 22:05:25.435051       1 filteredwatcher.go:191] (Re)starting watch for rbac.authorization.k8s.io/v1, Kind=RoleBinding at resource version ""
+I1001 22:05:25.435255       1 filteredwatcher.go:191] (Re)starting watch for rbac.authorization.k8s.io/v1, Kind=ClusterRole at resource version ""
+I1001 22:05:25.435392       1 filteredwatcher.go:191] (Re)starting watch for apiextensions.k8s.io/v1, Kind=CustomResourceDefinition at resource version ""
+I1001 22:05:25.435529       1 filteredwatcher.go:191] (Re)starting watch for kubevirt.io/v1, Kind=KubeVirt at resource version ""
+I1001 22:05:25.436895       1 filteredwatcher.go:191] (Re)starting watch for apps/v1, Kind=Deployment at resource version ""
+E1001 22:05:25.562234       1 state.go:69] Invalidating reconciler checkpoint: 2 error(s) 
+[1] KNV1021: No CustomResourceDefinition is defined for the type "VirtualMachine.kubevirt.io" in the cluster. Resource types that are not native Kubernetes objects must have a CustomResourceDefinition.  Config Sync will retry until a CustomResourceDefinition is defined for the type "VirtualMachine.kubevirt.io" in the cluster.  source: vm/virtualmachine_testvm.yaml namespace: vm metadata.name: testvm group: kubevirt.io version: v1alpha3 kind: VirtualMachine  For more information, see https://g.co/cloud/acm-errors#knv1021 
+[2] KNV2009: timeout after 2 seconds waiting for 5 resources to reach condition AllCurrent  For more information, see https://g.co/cloud/acm-errors#knv2009 
+I1001 22:05:27.413164       1 run.go:73] The last reconciliation failed
+I1001 22:05:27.429686       1 root.go:92] Parsing files from git dir: /repo/source/53dbd5251cb07e95ca2d5f21bc05a1df7b23dbe9
+I1001 22:05:28.547233       1 cache.go:107] Skip sending 1 unknown-scoped objects to the applier: [kubevirt.io_virtualmachine_vm_testvm]
+I1001 22:05:28.567661       1 kpt_applier.go:170] time to call NewFactory: 4µs
+I1001 22:05:28.568865       1 kpt_applier.go:178] time to call ToRESTMapper: 1.012029ms
+I1001 22:05:28.570174       1 kpt_applier.go:195] 12 objects to be applied: [_namespace_kubevirt _namespace_vm _serviceaccount_kubevirt_kubevirt-operator apiextensions.k8s.io_customresourcedefinition_kubevirts.kubevirt.io apps_deployment_kubevirt_virt-operator kubevirt.io_kubevirt_kubevirt_kubevirt rbac.authorization.k8s.io_clusterrole_kubevirt-operator rbac.authorization.k8s.io_clusterrole_kubevirt.io:operator rbac.authorization.k8s.io_clusterrolebinding_kubevirt-operator rbac.authorization.k8s.io_role_kubevirt_kubevirt-operator rbac.authorization.k8s.io_rolebinding_kubevirt_kubevirt-operator-rolebinding scheduling.k8s.io_priorityclass_kubevirt-cluster-critical]
+I1001 22:05:28.572609       1 kpt_applier.go:214] obj: _namespace_kubevirt
+I1001 22:05:28.572725       1 kpt_applier.go:214] obj: _namespace_vm
+I1001 22:05:28.572837       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_clusterrole_kubevirt-operator
+I1001 22:05:28.572919       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_clusterrole_kubevirt.io:operator
+I1001 22:05:28.573006       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_clusterrolebinding_kubevirt-operator
+I1001 22:05:28.573209       1 kpt_applier.go:214] obj: apiextensions.k8s.io_customresourcedefinition_kubevirts.kubevirt.io
+I1001 22:05:28.573289       1 kpt_applier.go:214] obj: scheduling.k8s.io_priorityclass_kubevirt-cluster-critical
+I1001 22:05:28.573379       1 kpt_applier.go:214] obj: apps_deployment_kubevirt_virt-operator
+I1001 22:05:28.573463       1 kpt_applier.go:214] obj: kubevirt.io_kubevirt_kubevirt_kubevirt
+I1001 22:05:28.573627       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_role_kubevirt_kubevirt-operator
+I1001 22:05:28.573769       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_rolebinding_kubevirt_kubevirt-operator-rolebinding
+I1001 22:05:28.573786       1 kpt_applier.go:214] obj: _serviceaccount_kubevirt_kubevirt-operator
+I1001 22:05:28.991065       1 kpt_applier.go:125] applied [op: ServersideApplied] resource Namespace, /kubevirt
+I1001 22:05:29.142440       1 kpt_applier.go:125] applied [op: ServersideApplied] resource ClusterRole.rbac.authorization.k8s.io, /kubevirt-operator
+I1001 22:05:29.160330       1 kpt_applier.go:125] applied [op: ServersideApplied] resource ClusterRole.rbac.authorization.k8s.io, /kubevirt.io:operator
+I1001 22:05:29.177427       1 kpt_applier.go:125] applied [op: ServersideApplied] resource ClusterRoleBinding.rbac.authorization.k8s.io, /kubevirt-operator
+I1001 22:05:29.194500       1 kpt_applier.go:125] applied [op: ServersideApplied] resource PriorityClass.scheduling.k8s.io, /kubevirt-cluster-critical
+I1001 22:05:29.216244       1 kpt_applier.go:125] applied [op: ServersideApplied] resource Namespace, /vm
+I1001 22:05:29.447305       1 kpt_applier.go:125] applied [op: ServersideApplied] resource CustomResourceDefinition.apiextensions.k8s.io, /kubevirts.kubevirt.io
+I1001 22:05:31.018124       1 kpt_applier.go:125] applied [op: ServersideApplied] resource RoleBinding.rbac.authorization.k8s.io, kubevirt/kubevirt-operator-rolebinding
+I1001 22:05:31.086352       1 kpt_applier.go:125] applied [op: ServersideApplied] resource KubeVirt.kubevirt.io, kubevirt/kubevirt
+I1001 22:05:31.111710       1 kpt_applier.go:125] applied [op: ServersideApplied] resource ServiceAccount, kubevirt/kubevirt-operator
+I1001 22:05:31.136223       1 kpt_applier.go:125] applied [op: ServersideApplied] resource Role.rbac.authorization.k8s.io, kubevirt/kubevirt-operator
+I1001 22:05:31.164320       1 kpt_applier.go:125] applied [op: ServersideApplied] resource Deployment.apps, kubevirt/virt-operator
+I1001 22:05:33.168125       1 kpt_applier.go:247] The applier made new progress: ApplyEvent events (OpType: ServersideApplied): 12, ErrorType events: 1.
+E1001 22:05:33.169041       1 state.go:69] Invalidating reconciler checkpoint: 2 error(s) 
+[1] KNV1021: No CustomResourceDefinition is defined for the type "VirtualMachine.kubevirt.io" in the cluster. Resource types that are not native Kubernetes objects must have a CustomResourceDefinition.  Config Sync will retry until a CustomResourceDefinition is defined for the type "VirtualMachine.kubevirt.io" in the cluster.  source: vm/virtualmachine_testvm.yaml namespace: vm metadata.name: testvm group: kubevirt.io version: v1alpha3 kind: VirtualMachine  For more information, see https://g.co/cloud/acm-errors#knv1021 
+[2] KNV2009: timeout after 2 seconds waiting for 5 resources to reach condition AllCurrent  For more information, see https://g.co/cloud/acm-errors#knv2009 
+I1001 22:05:34.412997       1 run.go:73] The last reconciliation failed
+I1001 22:05:34.437989       1 root.go:92] Parsing files from git dir: /repo/source/53dbd5251cb07e95ca2d5f21bc05a1df7b23dbe9
+I1001 22:05:36.033325       1 cache.go:107] Skip sending 1 unknown-scoped objects to the applier: [kubevirt.io_virtualmachine_vm_testvm]
+I1001 22:05:36.049689       1 kpt_applier.go:170] time to call NewFactory: 6.205µs
+I1001 22:05:36.050512       1 kpt_applier.go:178] time to call ToRESTMapper: 781.303µs
+I1001 22:05:36.050643       1 kpt_applier.go:195] 12 objects to be applied: [_namespace_kubevirt _namespace_vm _serviceaccount_kubevirt_kubevirt-operator apiextensions.k8s.io_customresourcedefinition_kubevirts.kubevirt.io apps_deployment_kubevirt_virt-operator kubevirt.io_kubevirt_kubevirt_kubevirt rbac.authorization.k8s.io_clusterrole_kubevirt-operator rbac.authorization.k8s.io_clusterrole_kubevirt.io:operator rbac.authorization.k8s.io_clusterrolebinding_kubevirt-operator rbac.authorization.k8s.io_role_kubevirt_kubevirt-operator rbac.authorization.k8s.io_rolebinding_kubevirt_kubevirt-operator-rolebinding scheduling.k8s.io_priorityclass_kubevirt-cluster-critical]
+I1001 22:05:36.051864       1 kpt_applier.go:214] obj: _namespace_kubevirt
+I1001 22:05:36.051889       1 kpt_applier.go:214] obj: _namespace_vm
+I1001 22:05:36.051899       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_clusterrole_kubevirt-operator
+I1001 22:05:36.051909       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_clusterrole_kubevirt.io:operator
+I1001 22:05:36.051918       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_clusterrolebinding_kubevirt-operator
+I1001 22:05:36.051929       1 kpt_applier.go:214] obj: apiextensions.k8s.io_customresourcedefinition_kubevirts.kubevirt.io
+I1001 22:05:36.051941       1 kpt_applier.go:214] obj: scheduling.k8s.io_priorityclass_kubevirt-cluster-critical
+I1001 22:05:36.051951       1 kpt_applier.go:214] obj: apps_deployment_kubevirt_virt-operator
+I1001 22:05:36.051966       1 kpt_applier.go:214] obj: kubevirt.io_kubevirt_kubevirt_kubevirt
+I1001 22:05:36.052017       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_role_kubevirt_kubevirt-operator
+I1001 22:05:36.052034       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_rolebinding_kubevirt_kubevirt-operator-rolebinding
+I1001 22:05:36.052053       1 kpt_applier.go:214] obj: _serviceaccount_kubevirt_kubevirt-operator
+I1001 22:05:36.185853       1 kpt_applier.go:125] applied [op: ServersideApplied] resource ClusterRole.rbac.authorization.k8s.io, /kubevirt-operator
+I1001 22:05:36.236834       1 kpt_applier.go:125] applied [op: ServersideApplied] resource ClusterRole.rbac.authorization.k8s.io, /kubevirt.io:operator
+I1001 22:05:36.256970       1 kpt_applier.go:125] applied [op: ServersideApplied] resource Namespace, /vm
+I1001 22:05:36.506092       1 kpt_applier.go:125] applied [op: ServersideApplied] resource CustomResourceDefinition.apiextensions.k8s.io, /kubevirts.kubevirt.io
+I1001 22:05:36.519032       1 kpt_applier.go:125] applied [op: ServersideApplied] resource ClusterRoleBinding.rbac.authorization.k8s.io, /kubevirt-operator
+I1001 22:05:36.537297       1 kpt_applier.go:125] applied [op: ServersideApplied] resource PriorityClass.scheduling.k8s.io, /kubevirt-cluster-critical
+I1001 22:05:36.552906       1 kpt_applier.go:125] applied [op: ServersideApplied] resource Namespace, /kubevirt
+I1001 22:05:37.783936       1 kpt_applier.go:125] applied [op: ServersideApplied] resource KubeVirt.kubevirt.io, kubevirt/kubevirt
+I1001 22:05:37.806161       1 kpt_applier.go:125] applied [op: ServersideApplied] resource ServiceAccount, kubevirt/kubevirt-operator
+I1001 22:05:37.822397       1 kpt_applier.go:125] applied [op: ServersideApplied] resource Role.rbac.authorization.k8s.io, kubevirt/kubevirt-operator
+I1001 22:05:37.848589       1 kpt_applier.go:125] applied [op: ServersideApplied] resource RoleBinding.rbac.authorization.k8s.io, kubevirt/kubevirt-operator-rolebinding
+I1001 22:05:37.885240       1 kpt_applier.go:125] applied [op: ServersideApplied] resource Deployment.apps, kubevirt/virt-operator
+I1001 22:05:39.886312       1 kpt_applier.go:247] The applier made new progress: ApplyEvent events (OpType: ServersideApplied): 12, ErrorType events: 1.
+E1001 22:05:39.886694       1 state.go:69] Invalidating reconciler checkpoint: 2 error(s) 
+[1] KNV1021: No CustomResourceDefinition is defined for the type "VirtualMachine.kubevirt.io" in the cluster. Resource types that are not native Kubernetes objects must have a CustomResourceDefinition.  Config Sync will retry until a CustomResourceDefinition is defined for the type "VirtualMachine.kubevirt.io" in the cluster.  source: vm/virtualmachine_testvm.yaml namespace: vm metadata.name: testvm group: kubevirt.io version: v1alpha3 kind: VirtualMachine  For more information, see https://g.co/cloud/acm-errors#knv1021 
+[2] KNV2009: timeout after 2 seconds waiting for 5 resources to reach condition AllCurrent  For more information, see https://g.co/cloud/acm-errors#knv2009 
+I1001 22:05:41.413144       1 run.go:73] The last reconciliation failed
+I1001 22:05:41.423155       1 root.go:92] Parsing files from git dir: /repo/source/53dbd5251cb07e95ca2d5f21bc05a1df7b23dbe9
+I1001 22:05:42.661978       1 request.go:668] Waited for 1.122992468s due to client-side throttling, not priority and fairness, request: GET:https://10.0.0.1:443/apis/configsync.gke.io/v1beta1?timeout=32s
+I1001 22:05:43.693234       1 cache.go:107] Skip sending 1 unknown-scoped objects to the applier: [kubevirt.io_virtualmachine_vm_testvm]
+I1001 22:05:43.717140       1 kpt_applier.go:170] time to call NewFactory: 4.229µs
+I1001 22:05:43.718303       1 kpt_applier.go:178] time to call ToRESTMapper: 891.499µs
+I1001 22:05:43.718678       1 kpt_applier.go:195] 12 objects to be applied: [_namespace_kubevirt _namespace_vm _serviceaccount_kubevirt_kubevirt-operator apiextensions.k8s.io_customresourcedefinition_kubevirts.kubevirt.io apps_deployment_kubevirt_virt-operator kubevirt.io_kubevirt_kubevirt_kubevirt rbac.authorization.k8s.io_clusterrole_kubevirt-operator rbac.authorization.k8s.io_clusterrole_kubevirt.io:operator rbac.authorization.k8s.io_clusterrolebinding_kubevirt-operator rbac.authorization.k8s.io_role_kubevirt_kubevirt-operator rbac.authorization.k8s.io_rolebinding_kubevirt_kubevirt-operator-rolebinding scheduling.k8s.io_priorityclass_kubevirt-cluster-critical]
+I1001 22:05:43.720843       1 kpt_applier.go:214] obj: _namespace_kubevirt
+I1001 22:05:43.720874       1 kpt_applier.go:214] obj: _namespace_vm
+I1001 22:05:43.720885       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_clusterrole_kubevirt-operator
+I1001 22:05:43.720896       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_clusterrole_kubevirt.io:operator
+I1001 22:05:43.720905       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_clusterrolebinding_kubevirt-operator
+I1001 22:05:43.720913       1 kpt_applier.go:214] obj: apiextensions.k8s.io_customresourcedefinition_kubevirts.kubevirt.io
+I1001 22:05:43.720927       1 kpt_applier.go:214] obj: scheduling.k8s.io_priorityclass_kubevirt-cluster-critical
+I1001 22:05:43.720938       1 kpt_applier.go:214] obj: apps_deployment_kubevirt_virt-operator
+I1001 22:05:43.720947       1 kpt_applier.go:214] obj: kubevirt.io_kubevirt_kubevirt_kubevirt
+I1001 22:05:43.720956       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_role_kubevirt_kubevirt-operator
+I1001 22:05:43.720965       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_rolebinding_kubevirt_kubevirt-operator-rolebinding
+I1001 22:05:43.721012       1 kpt_applier.go:214] obj: _serviceaccount_kubevirt_kubevirt-operator
+I1001 22:05:43.797219       1 kpt_applier.go:125] applied [op: ServersideApplied] resource Namespace, /kubevirt
+I1001 22:05:43.827049       1 kpt_applier.go:125] applied [op: ServersideApplied] resource Namespace, /vm
+I1001 22:05:44.144661       1 kpt_applier.go:125] applied [op: ServersideApplied] resource CustomResourceDefinition.apiextensions.k8s.io, /kubevirts.kubevirt.io
+I1001 22:05:44.185832       1 kpt_applier.go:125] applied [op: ServersideApplied] resource ClusterRoleBinding.rbac.authorization.k8s.io, /kubevirt-operator
+I1001 22:05:44.216670       1 kpt_applier.go:125] applied [op: ServersideApplied] resource PriorityClass.scheduling.k8s.io, /kubevirt-cluster-critical
+I1001 22:05:44.258260       1 kpt_applier.go:125] applied [op: ServersideApplied] resource ClusterRole.rbac.authorization.k8s.io, /kubevirt-operator
+I1001 22:05:44.281037       1 kpt_applier.go:125] applied [op: ServersideApplied] resource ClusterRole.rbac.authorization.k8s.io, /kubevirt.io:operator
+I1001 22:05:48.041939       1 kpt_applier.go:125] applied [op: ServersideApplied] resource Role.rbac.authorization.k8s.io, kubevirt/kubevirt-operator
+I1001 22:05:48.080079       1 kpt_applier.go:125] applied [op: ServersideApplied] resource KubeVirt.kubevirt.io, kubevirt/kubevirt
+I1001 22:05:48.115738       1 kpt_applier.go:125] applied [op: ServersideApplied] resource ServiceAccount, kubevirt/kubevirt-operator
+I1001 22:05:48.137339       1 kpt_applier.go:125] applied [op: ServersideApplied] resource RoleBinding.rbac.authorization.k8s.io, kubevirt/kubevirt-operator-rolebinding
+I1001 22:05:48.165298       1 kpt_applier.go:125] applied [op: ServersideApplied] resource Deployment.apps, kubevirt/virt-operator
+I1001 22:05:50.166894       1 kpt_applier.go:247] The applier made new progress: ApplyEvent events (OpType: ServersideApplied): 12, ErrorType events: 1.
+E1001 22:05:50.167202       1 state.go:69] Invalidating reconciler checkpoint: 2 error(s) 
+[1] KNV1021: No CustomResourceDefinition is defined for the type "VirtualMachine.kubevirt.io" in the cluster. Resource types that are not native Kubernetes objects must have a CustomResourceDefinition.  Config Sync will retry until a CustomResourceDefinition is defined for the type "VirtualMachine.kubevirt.io" in the cluster.  source: vm/virtualmachine_testvm.yaml namespace: vm metadata.name: testvm group: kubevirt.io version: v1alpha3 kind: VirtualMachine  For more information, see https://g.co/cloud/acm-errors#knv1021 
+[2] KNV2009: timeout after 2 seconds waiting for 5 resources to reach condition AllCurrent  For more information, see https://g.co/cloud/acm-errors#knv2009 
+I1001 22:05:51.412457       1 run.go:73] The last reconciliation failed
+I1001 22:05:51.422755       1 root.go:92] Parsing files from git dir: /repo/source/53dbd5251cb07e95ca2d5f21bc05a1df7b23dbe9
+I1001 22:05:52.861877       1 request.go:668] Waited for 1.097389129s due to client-side throttling, not priority and fairness, request: GET:https://10.0.0.1:443/apis/node.k8s.io/v1beta1?timeout=32s
+I1001 22:05:55.511519       1 kpt_applier.go:170] time to call NewFactory: 6.516µs
+I1001 22:05:55.512644       1 kpt_applier.go:178] time to call ToRESTMapper: 714.334µs
+I1001 22:05:55.513112       1 kpt_applier.go:195] 13 objects to be applied: [_namespace_kubevirt _namespace_vm _serviceaccount_kubevirt_kubevirt-operator apiextensions.k8s.io_customresourcedefinition_kubevirts.kubevirt.io apps_deployment_kubevirt_virt-operator kubevirt.io_kubevirt_kubevirt_kubevirt kubevirt.io_virtualmachine_vm_testvm rbac.authorization.k8s.io_clusterrole_kubevirt-operator rbac.authorization.k8s.io_clusterrole_kubevirt.io:operator rbac.authorization.k8s.io_clusterrolebinding_kubevirt-operator rbac.authorization.k8s.io_role_kubevirt_kubevirt-operator rbac.authorization.k8s.io_rolebinding_kubevirt_kubevirt-operator-rolebinding scheduling.k8s.io_priorityclass_kubevirt-cluster-critical]
+I1001 22:05:55.514852       1 kpt_applier.go:214] obj: _namespace_kubevirt
+I1001 22:05:55.515093       1 kpt_applier.go:214] obj: _namespace_vm
+I1001 22:05:55.515282       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_clusterrole_kubevirt-operator
+I1001 22:05:55.515474       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_clusterrole_kubevirt.io:operator
+I1001 22:05:55.515637       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_clusterrolebinding_kubevirt-operator
+I1001 22:05:55.515783       1 kpt_applier.go:214] obj: apiextensions.k8s.io_customresourcedefinition_kubevirts.kubevirt.io
+I1001 22:05:55.515932       1 kpt_applier.go:214] obj: scheduling.k8s.io_priorityclass_kubevirt-cluster-critical
+I1001 22:05:55.516044       1 kpt_applier.go:214] obj: apps_deployment_kubevirt_virt-operator
+I1001 22:05:55.516190       1 kpt_applier.go:214] obj: kubevirt.io_kubevirt_kubevirt_kubevirt
+I1001 22:05:55.516334       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_role_kubevirt_kubevirt-operator
+I1001 22:05:55.516474       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_rolebinding_kubevirt_kubevirt-operator-rolebinding
+I1001 22:05:55.516628       1 kpt_applier.go:214] obj: _serviceaccount_kubevirt_kubevirt-operator
+I1001 22:05:55.516765       1 kpt_applier.go:214] obj: kubevirt.io_virtualmachine_vm_testvm
+I1001 22:05:55.517895       1 kpt_applier.go:247] The applier made new progress: ErrorType events: 1.
+I1001 22:05:56.541333       1 manager.go:158] The remediator made new progress: started 1 new watches, and stopped 0 watches
+I1001 22:05:56.541367       1 filteredwatcher.go:172] Watch started for kubevirt.io/v1alpha3, Kind=VirtualMachine
+E1001 22:05:57.134996       1 state.go:69] Invalidating reconciler checkpoint: 1 error(s) 
+[1] KNV2009: unknown resource type: "VirtualMachine.kubevirt.io"  For more information, see https://g.co/cloud/acm-errors#knv2009 
+I1001 22:05:57.883050       1 filteredwatcher.go:191] (Re)starting watch for kubevirt.io/v1alpha3, Kind=VirtualMachine at resource version ""
+I1001 22:05:58.412904       1 run.go:73] The last reconciliation failed
+I1001 22:05:58.413304       1 kpt_applier.go:170] time to call NewFactory: 9.159µs
+I1001 22:05:58.414041       1 kpt_applier.go:178] time to call ToRESTMapper: 670.437µs
+I1001 22:05:58.414282       1 kpt_applier.go:195] 13 objects to be applied: [_namespace_kubevirt _namespace_vm _serviceaccount_kubevirt_kubevirt-operator apiextensions.k8s.io_customresourcedefinition_kubevirts.kubevirt.io apps_deployment_kubevirt_virt-operator kubevirt.io_kubevirt_kubevirt_kubevirt kubevirt.io_virtualmachine_vm_testvm rbac.authorization.k8s.io_clusterrole_kubevirt-operator rbac.authorization.k8s.io_clusterrole_kubevirt.io:operator rbac.authorization.k8s.io_clusterrolebinding_kubevirt-operator rbac.authorization.k8s.io_role_kubevirt_kubevirt-operator rbac.authorization.k8s.io_rolebinding_kubevirt_kubevirt-operator-rolebinding scheduling.k8s.io_priorityclass_kubevirt-cluster-critical]
+I1001 22:05:58.415361       1 kpt_applier.go:214] obj: _namespace_kubevirt
+I1001 22:05:58.415460       1 kpt_applier.go:214] obj: _namespace_vm
+I1001 22:05:58.415528       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_clusterrole_kubevirt-operator
+I1001 22:05:58.415612       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_clusterrole_kubevirt.io:operator
+I1001 22:05:58.415649       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_clusterrolebinding_kubevirt-operator
+I1001 22:05:58.415719       1 kpt_applier.go:214] obj: apiextensions.k8s.io_customresourcedefinition_kubevirts.kubevirt.io
+I1001 22:05:58.415786       1 kpt_applier.go:214] obj: scheduling.k8s.io_priorityclass_kubevirt-cluster-critical
+I1001 22:05:58.415870       1 kpt_applier.go:214] obj: apps_deployment_kubevirt_virt-operator
+I1001 22:05:58.415906       1 kpt_applier.go:214] obj: kubevirt.io_kubevirt_kubevirt_kubevirt
+I1001 22:05:58.415975       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_role_kubevirt_kubevirt-operator
+I1001 22:05:58.416010       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_rolebinding_kubevirt_kubevirt-operator-rolebinding
+I1001 22:05:58.416076       1 kpt_applier.go:214] obj: _serviceaccount_kubevirt_kubevirt-operator
+I1001 22:05:58.416106       1 kpt_applier.go:214] obj: kubevirt.io_virtualmachine_vm_testvm
+I1001 22:05:58.417207       1 kpt_applier.go:247] The applier made new progress: ErrorType events: 1.
+E1001 22:05:58.417495       1 state.go:69] Invalidating reconciler checkpoint: 1 error(s) 
+[1] KNV2009: unknown resource type: "VirtualMachine.kubevirt.io"  For more information, see https://g.co/cloud/acm-errors#knv2009 
+I1001 22:06:00.412741       1 run.go:73] The last reconciliation failed
+I1001 22:06:00.412999       1 kpt_applier.go:170] time to call NewFactory: 6.338µs
+I1001 22:06:00.413662       1 kpt_applier.go:178] time to call ToRESTMapper: 641.721µs
+I1001 22:06:00.413872       1 kpt_applier.go:195] 13 objects to be applied: [_namespace_kubevirt _namespace_vm _serviceaccount_kubevirt_kubevirt-operator apiextensions.k8s.io_customresourcedefinition_kubevirts.kubevirt.io apps_deployment_kubevirt_virt-operator kubevirt.io_kubevirt_kubevirt_kubevirt kubevirt.io_virtualmachine_vm_testvm rbac.authorization.k8s.io_clusterrole_kubevirt-operator rbac.authorization.k8s.io_clusterrole_kubevirt.io:operator rbac.authorization.k8s.io_clusterrolebinding_kubevirt-operator rbac.authorization.k8s.io_role_kubevirt_kubevirt-operator rbac.authorization.k8s.io_rolebinding_kubevirt_kubevirt-operator-rolebinding scheduling.k8s.io_priorityclass_kubevirt-cluster-critical]
+I1001 22:06:00.415350       1 kpt_applier.go:214] obj: _namespace_kubevirt
+I1001 22:06:00.415383       1 kpt_applier.go:214] obj: _namespace_vm
+I1001 22:06:00.415395       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_clusterrole_kubevirt-operator
+I1001 22:06:00.415405       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_clusterrole_kubevirt.io:operator
+I1001 22:06:00.415416       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_clusterrolebinding_kubevirt-operator
+I1001 22:06:00.415428       1 kpt_applier.go:214] obj: apiextensions.k8s.io_customresourcedefinition_kubevirts.kubevirt.io
+I1001 22:06:00.415444       1 kpt_applier.go:214] obj: scheduling.k8s.io_priorityclass_kubevirt-cluster-critical
+I1001 22:06:00.415456       1 kpt_applier.go:214] obj: apps_deployment_kubevirt_virt-operator
+I1001 22:06:00.415474       1 kpt_applier.go:214] obj: kubevirt.io_kubevirt_kubevirt_kubevirt
+I1001 22:06:00.415491       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_role_kubevirt_kubevirt-operator
+I1001 22:06:00.415508       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_rolebinding_kubevirt_kubevirt-operator-rolebinding
+I1001 22:06:00.415518       1 kpt_applier.go:214] obj: _serviceaccount_kubevirt_kubevirt-operator
+I1001 22:06:00.415529       1 kpt_applier.go:214] obj: kubevirt.io_virtualmachine_vm_testvm
+I1001 22:06:00.416454       1 kpt_applier.go:247] The applier made new progress: ErrorType events: 1.
+E1001 22:06:00.416872       1 state.go:69] Invalidating reconciler checkpoint: 1 error(s) 
+[1] KNV2009: unknown resource type: "VirtualMachine.kubevirt.io"  For more information, see https://g.co/cloud/acm-errors#knv2009 
+I1001 22:06:02.412888       1 run.go:73] The last reconciliation failed
+I1001 22:06:02.413197       1 kpt_applier.go:170] time to call NewFactory: 7.8µs
+I1001 22:06:02.414000       1 kpt_applier.go:178] time to call ToRESTMapper: 783.048µs
+I1001 22:06:02.414172       1 kpt_applier.go:195] 13 objects to be applied: [_namespace_kubevirt _namespace_vm _serviceaccount_kubevirt_kubevirt-operator apiextensions.k8s.io_customresourcedefinition_kubevirts.kubevirt.io apps_deployment_kubevirt_virt-operator kubevirt.io_kubevirt_kubevirt_kubevirt kubevirt.io_virtualmachine_vm_testvm rbac.authorization.k8s.io_clusterrole_kubevirt-operator rbac.authorization.k8s.io_clusterrole_kubevirt.io:operator rbac.authorization.k8s.io_clusterrolebinding_kubevirt-operator rbac.authorization.k8s.io_role_kubevirt_kubevirt-operator rbac.authorization.k8s.io_rolebinding_kubevirt_kubevirt-operator-rolebinding scheduling.k8s.io_priorityclass_kubevirt-cluster-critical]
+I1001 22:06:02.420593       1 kpt_applier.go:214] obj: _namespace_kubevirt
+I1001 22:06:02.420626       1 kpt_applier.go:214] obj: _namespace_vm
+I1001 22:06:02.420641       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_clusterrole_kubevirt-operator
+I1001 22:06:02.420650       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_clusterrole_kubevirt.io:operator
+I1001 22:06:02.420660       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_clusterrolebinding_kubevirt-operator
+I1001 22:06:02.420670       1 kpt_applier.go:214] obj: apiextensions.k8s.io_customresourcedefinition_kubevirts.kubevirt.io
+I1001 22:06:02.420679       1 kpt_applier.go:214] obj: scheduling.k8s.io_priorityclass_kubevirt-cluster-critical
+I1001 22:06:02.420689       1 kpt_applier.go:214] obj: apps_deployment_kubevirt_virt-operator
+I1001 22:06:02.420698       1 kpt_applier.go:214] obj: kubevirt.io_kubevirt_kubevirt_kubevirt
+I1001 22:06:02.420709       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_role_kubevirt_kubevirt-operator
+I1001 22:06:02.420718       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_rolebinding_kubevirt_kubevirt-operator-rolebinding
+I1001 22:06:02.420726       1 kpt_applier.go:214] obj: _serviceaccount_kubevirt_kubevirt-operator
+I1001 22:06:02.420735       1 kpt_applier.go:214] obj: kubevirt.io_virtualmachine_vm_testvm
+I1001 22:06:02.423730       1 kpt_applier.go:247] The applier made new progress: ErrorType events: 1.
+E1001 22:06:02.423941       1 state.go:69] Invalidating reconciler checkpoint: 1 error(s) 
+[1] KNV2009: unknown resource type: "VirtualMachine.kubevirt.io"  For more information, see https://g.co/cloud/acm-errors#knv2009 
+I1001 22:06:04.412497       1 run.go:73] The last reconciliation failed
+I1001 22:06:04.412983       1 kpt_applier.go:170] time to call NewFactory: 7.092µs
+I1001 22:06:04.413669       1 kpt_applier.go:178] time to call ToRESTMapper: 611.315µs
+I1001 22:06:04.413995       1 kpt_applier.go:195] 13 objects to be applied: [_namespace_kubevirt _namespace_vm _serviceaccount_kubevirt_kubevirt-operator apiextensions.k8s.io_customresourcedefinition_kubevirts.kubevirt.io apps_deployment_kubevirt_virt-operator kubevirt.io_kubevirt_kubevirt_kubevirt kubevirt.io_virtualmachine_vm_testvm rbac.authorization.k8s.io_clusterrole_kubevirt-operator rbac.authorization.k8s.io_clusterrole_kubevirt.io:operator rbac.authorization.k8s.io_clusterrolebinding_kubevirt-operator rbac.authorization.k8s.io_role_kubevirt_kubevirt-operator rbac.authorization.k8s.io_rolebinding_kubevirt_kubevirt-operator-rolebinding scheduling.k8s.io_priorityclass_kubevirt-cluster-critical]
+I1001 22:06:04.415247       1 kpt_applier.go:214] obj: _namespace_kubevirt
+I1001 22:06:04.415334       1 kpt_applier.go:214] obj: _namespace_vm
+I1001 22:06:04.415369       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_clusterrole_kubevirt-operator
+I1001 22:06:04.415418       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_clusterrole_kubevirt.io:operator
+I1001 22:06:04.415460       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_clusterrolebinding_kubevirt-operator
+I1001 22:06:04.415505       1 kpt_applier.go:214] obj: apiextensions.k8s.io_customresourcedefinition_kubevirts.kubevirt.io
+I1001 22:06:04.415560       1 kpt_applier.go:214] obj: scheduling.k8s.io_priorityclass_kubevirt-cluster-critical
+I1001 22:06:04.415599       1 kpt_applier.go:214] obj: apps_deployment_kubevirt_virt-operator
+I1001 22:06:04.415643       1 kpt_applier.go:214] obj: kubevirt.io_kubevirt_kubevirt_kubevirt
+I1001 22:06:04.415688       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_role_kubevirt_kubevirt-operator
+I1001 22:06:04.415730       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_rolebinding_kubevirt_kubevirt-operator-rolebinding
+I1001 22:06:04.415766       1 kpt_applier.go:214] obj: _serviceaccount_kubevirt_kubevirt-operator
+I1001 22:06:04.415827       1 kpt_applier.go:214] obj: kubevirt.io_virtualmachine_vm_testvm
+I1001 22:06:04.416757       1 kpt_applier.go:247] The applier made new progress: ErrorType events: 1.
+E1001 22:06:04.417083       1 state.go:69] Invalidating reconciler checkpoint: 1 error(s) 
+[1] KNV2009: unknown resource type: "VirtualMachine.kubevirt.io"  For more information, see https://g.co/cloud/acm-errors#knv2009 
+I1001 22:06:06.412424       1 run.go:73] The last reconciliation failed
+I1001 22:06:06.413154       1 kpt_applier.go:170] time to call NewFactory: 6.946µs
+I1001 22:06:06.414048       1 kpt_applier.go:178] time to call ToRESTMapper: 803.544µs
+I1001 22:06:06.414458       1 kpt_applier.go:195] 13 objects to be applied: [_namespace_kubevirt _namespace_vm _serviceaccount_kubevirt_kubevirt-operator apiextensions.k8s.io_customresourcedefinition_kubevirts.kubevirt.io apps_deployment_kubevirt_virt-operator kubevirt.io_kubevirt_kubevirt_kubevirt kubevirt.io_virtualmachine_vm_testvm rbac.authorization.k8s.io_clusterrole_kubevirt-operator rbac.authorization.k8s.io_clusterrole_kubevirt.io:operator rbac.authorization.k8s.io_clusterrolebinding_kubevirt-operator rbac.authorization.k8s.io_role_kubevirt_kubevirt-operator rbac.authorization.k8s.io_rolebinding_kubevirt_kubevirt-operator-rolebinding scheduling.k8s.io_priorityclass_kubevirt-cluster-critical]
+I1001 22:06:06.416106       1 kpt_applier.go:214] obj: _namespace_kubevirt
+I1001 22:06:06.417975       1 kpt_applier.go:214] obj: _namespace_vm
+I1001 22:06:06.418062       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_clusterrole_kubevirt-operator
+I1001 22:06:06.418148       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_clusterrole_kubevirt.io:operator
+I1001 22:06:06.418563       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_clusterrolebinding_kubevirt-operator
+I1001 22:06:06.418638       1 kpt_applier.go:214] obj: apiextensions.k8s.io_customresourcedefinition_kubevirts.kubevirt.io
+I1001 22:06:06.418952       1 kpt_applier.go:214] obj: scheduling.k8s.io_priorityclass_kubevirt-cluster-critical
+I1001 22:06:06.419024       1 kpt_applier.go:214] obj: apps_deployment_kubevirt_virt-operator
+I1001 22:06:06.419296       1 kpt_applier.go:214] obj: kubevirt.io_kubevirt_kubevirt_kubevirt
+I1001 22:06:06.419366       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_role_kubevirt_kubevirt-operator
+I1001 22:06:06.419443       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_rolebinding_kubevirt_kubevirt-operator-rolebinding
+I1001 22:06:06.419581       1 kpt_applier.go:214] obj: _serviceaccount_kubevirt_kubevirt-operator
+I1001 22:06:06.419639       1 kpt_applier.go:214] obj: kubevirt.io_virtualmachine_vm_testvm
+I1001 22:06:06.420915       1 kpt_applier.go:247] The applier made new progress: ErrorType events: 1.
+E1001 22:06:06.421452       1 state.go:69] Invalidating reconciler checkpoint: 1 error(s) 
+[1] KNV2009: unknown resource type: "VirtualMachine.kubevirt.io"  For more information, see https://g.co/cloud/acm-errors#knv2009 
+I1001 22:06:09.412612       1 run.go:73] The last reconciliation failed
+I1001 22:06:09.413128       1 kpt_applier.go:170] time to call NewFactory: 4.838µs
+I1001 22:06:09.414027       1 kpt_applier.go:178] time to call ToRESTMapper: 438.069µs
+I1001 22:06:09.414453       1 kpt_applier.go:195] 13 objects to be applied: [_namespace_kubevirt _namespace_vm _serviceaccount_kubevirt_kubevirt-operator apiextensions.k8s.io_customresourcedefinition_kubevirts.kubevirt.io apps_deployment_kubevirt_virt-operator kubevirt.io_kubevirt_kubevirt_kubevirt kubevirt.io_virtualmachine_vm_testvm rbac.authorization.k8s.io_clusterrole_kubevirt-operator rbac.authorization.k8s.io_clusterrole_kubevirt.io:operator rbac.authorization.k8s.io_clusterrolebinding_kubevirt-operator rbac.authorization.k8s.io_role_kubevirt_kubevirt-operator rbac.authorization.k8s.io_rolebinding_kubevirt_kubevirt-operator-rolebinding scheduling.k8s.io_priorityclass_kubevirt-cluster-critical]
+I1001 22:06:09.415637       1 kpt_applier.go:214] obj: _namespace_kubevirt
+I1001 22:06:09.415997       1 kpt_applier.go:214] obj: _namespace_vm
+I1001 22:06:09.416270       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_clusterrole_kubevirt-operator
+I1001 22:06:09.416533       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_clusterrole_kubevirt.io:operator
+I1001 22:06:09.416787       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_clusterrolebinding_kubevirt-operator
+I1001 22:06:09.416827       1 kpt_applier.go:214] obj: apiextensions.k8s.io_customresourcedefinition_kubevirts.kubevirt.io
+I1001 22:06:09.416953       1 kpt_applier.go:214] obj: scheduling.k8s.io_priorityclass_kubevirt-cluster-critical
+I1001 22:06:09.416970       1 kpt_applier.go:214] obj: apps_deployment_kubevirt_virt-operator
+I1001 22:06:09.417112       1 kpt_applier.go:214] obj: kubevirt.io_kubevirt_kubevirt_kubevirt
+I1001 22:06:09.417202       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_role_kubevirt_kubevirt-operator
+I1001 22:06:09.417283       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_rolebinding_kubevirt_kubevirt-operator-rolebinding
+I1001 22:06:09.417366       1 kpt_applier.go:214] obj: _serviceaccount_kubevirt_kubevirt-operator
+I1001 22:06:09.417441       1 kpt_applier.go:214] obj: kubevirt.io_virtualmachine_vm_testvm
+I1001 22:06:09.418294       1 kpt_applier.go:247] The applier made new progress: ErrorType events: 1.
+E1001 22:06:09.418744       1 state.go:69] Invalidating reconciler checkpoint: 1 error(s) 
+[1] KNV2009: unknown resource type: "VirtualMachine.kubevirt.io"  For more information, see https://g.co/cloud/acm-errors#knv2009 
+I1001 22:06:14.413125       1 run.go:73] The last reconciliation failed
+I1001 22:06:14.413923       1 kpt_applier.go:170] time to call NewFactory: 8.807µs
+I1001 22:06:14.414668       1 kpt_applier.go:178] time to call ToRESTMapper: 714.72µs
+I1001 22:06:14.414824       1 kpt_applier.go:195] 13 objects to be applied: [_namespace_kubevirt _namespace_vm _serviceaccount_kubevirt_kubevirt-operator apiextensions.k8s.io_customresourcedefinition_kubevirts.kubevirt.io apps_deployment_kubevirt_virt-operator kubevirt.io_kubevirt_kubevirt_kubevirt kubevirt.io_virtualmachine_vm_testvm rbac.authorization.k8s.io_clusterrole_kubevirt-operator rbac.authorization.k8s.io_clusterrole_kubevirt.io:operator rbac.authorization.k8s.io_clusterrolebinding_kubevirt-operator rbac.authorization.k8s.io_role_kubevirt_kubevirt-operator rbac.authorization.k8s.io_rolebinding_kubevirt_kubevirt-operator-rolebinding scheduling.k8s.io_priorityclass_kubevirt-cluster-critical]
+I1001 22:06:14.416017       1 kpt_applier.go:214] obj: _namespace_kubevirt
+I1001 22:06:14.416044       1 kpt_applier.go:214] obj: _namespace_vm
+I1001 22:06:14.416053       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_clusterrole_kubevirt-operator
+I1001 22:06:14.416062       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_clusterrole_kubevirt.io:operator
+I1001 22:06:14.416071       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_clusterrolebinding_kubevirt-operator
+I1001 22:06:14.416081       1 kpt_applier.go:214] obj: apiextensions.k8s.io_customresourcedefinition_kubevirts.kubevirt.io
+I1001 22:06:14.416095       1 kpt_applier.go:214] obj: scheduling.k8s.io_priorityclass_kubevirt-cluster-critical
+I1001 22:06:14.416106       1 kpt_applier.go:214] obj: apps_deployment_kubevirt_virt-operator
+I1001 22:06:14.416121       1 kpt_applier.go:214] obj: kubevirt.io_kubevirt_kubevirt_kubevirt
+I1001 22:06:14.416136       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_role_kubevirt_kubevirt-operator
+I1001 22:06:14.416150       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_rolebinding_kubevirt_kubevirt-operator-rolebinding
+I1001 22:06:14.416160       1 kpt_applier.go:214] obj: _serviceaccount_kubevirt_kubevirt-operator
+I1001 22:06:14.416175       1 kpt_applier.go:214] obj: kubevirt.io_virtualmachine_vm_testvm
+I1001 22:06:14.417490       1 kpt_applier.go:247] The applier made new progress: ErrorType events: 1.
+E1001 22:06:14.417731       1 state.go:69] Invalidating reconciler checkpoint: 1 error(s) 
+[1] KNV2009: unknown resource type: "VirtualMachine.kubevirt.io"  For more information, see https://g.co/cloud/acm-errors#knv2009 
+I1001 22:06:23.412982       1 run.go:73] The last reconciliation failed
+I1001 22:06:23.413699       1 kpt_applier.go:170] time to call NewFactory: 6.649µs
+I1001 22:06:23.414812       1 kpt_applier.go:178] time to call ToRESTMapper: 1.064543ms
+I1001 22:06:23.414994       1 kpt_applier.go:195] 13 objects to be applied: [_namespace_kubevirt _namespace_vm _serviceaccount_kubevirt_kubevirt-operator apiextensions.k8s.io_customresourcedefinition_kubevirts.kubevirt.io apps_deployment_kubevirt_virt-operator kubevirt.io_kubevirt_kubevirt_kubevirt kubevirt.io_virtualmachine_vm_testvm rbac.authorization.k8s.io_clusterrole_kubevirt-operator rbac.authorization.k8s.io_clusterrole_kubevirt.io:operator rbac.authorization.k8s.io_clusterrolebinding_kubevirt-operator rbac.authorization.k8s.io_role_kubevirt_kubevirt-operator rbac.authorization.k8s.io_rolebinding_kubevirt_kubevirt-operator-rolebinding scheduling.k8s.io_priorityclass_kubevirt-cluster-critical]
+I1001 22:06:23.416580       1 kpt_applier.go:214] obj: _namespace_kubevirt
+I1001 22:06:23.416657       1 kpt_applier.go:214] obj: _namespace_vm
+I1001 22:06:23.416684       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_clusterrole_kubevirt-operator
+I1001 22:06:23.416718       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_clusterrole_kubevirt.io:operator
+I1001 22:06:23.416749       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_clusterrolebinding_kubevirt-operator
+I1001 22:06:23.416773       1 kpt_applier.go:214] obj: apiextensions.k8s.io_customresourcedefinition_kubevirts.kubevirt.io
+I1001 22:06:23.416829       1 kpt_applier.go:214] obj: scheduling.k8s.io_priorityclass_kubevirt-cluster-critical
+I1001 22:06:23.417844       1 kpt_applier.go:214] obj: apps_deployment_kubevirt_virt-operator
+I1001 22:06:23.417868       1 kpt_applier.go:214] obj: kubevirt.io_kubevirt_kubevirt_kubevirt
+I1001 22:06:23.417879       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_role_kubevirt_kubevirt-operator
+I1001 22:06:23.418014       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_rolebinding_kubevirt_kubevirt-operator-rolebinding
+I1001 22:06:23.418108       1 kpt_applier.go:214] obj: _serviceaccount_kubevirt_kubevirt-operator
+I1001 22:06:23.418194       1 kpt_applier.go:214] obj: kubevirt.io_virtualmachine_vm_testvm
+I1001 22:06:23.419159       1 kpt_applier.go:247] The applier made new progress: ErrorType events: 1.
+E1001 22:06:23.419397       1 state.go:69] Invalidating reconciler checkpoint: 1 error(s) 
+[1] KNV2009: unknown resource type: "VirtualMachine.kubevirt.io"  For more information, see https://g.co/cloud/acm-errors#knv2009 
+I1001 22:06:40.413167       1 run.go:73] The last reconciliation failed
+I1001 22:06:40.413396       1 kpt_applier.go:170] time to call NewFactory: 6.95µs
+I1001 22:06:40.414103       1 kpt_applier.go:178] time to call ToRESTMapper: 686.62µs
+I1001 22:06:40.414213       1 kpt_applier.go:195] 13 objects to be applied: [_namespace_kubevirt _namespace_vm _serviceaccount_kubevirt_kubevirt-operator apiextensions.k8s.io_customresourcedefinition_kubevirts.kubevirt.io apps_deployment_kubevirt_virt-operator kubevirt.io_kubevirt_kubevirt_kubevirt kubevirt.io_virtualmachine_vm_testvm rbac.authorization.k8s.io_clusterrole_kubevirt-operator rbac.authorization.k8s.io_clusterrole_kubevirt.io:operator rbac.authorization.k8s.io_clusterrolebinding_kubevirt-operator rbac.authorization.k8s.io_role_kubevirt_kubevirt-operator rbac.authorization.k8s.io_rolebinding_kubevirt_kubevirt-operator-rolebinding scheduling.k8s.io_priorityclass_kubevirt-cluster-critical]
+I1001 22:06:40.415331       1 kpt_applier.go:214] obj: _namespace_kubevirt
+I1001 22:06:40.415360       1 kpt_applier.go:214] obj: _namespace_vm
+I1001 22:06:40.415370       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_clusterrole_kubevirt-operator
+I1001 22:06:40.415379       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_clusterrole_kubevirt.io:operator
+I1001 22:06:40.415387       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_clusterrolebinding_kubevirt-operator
+I1001 22:06:40.415396       1 kpt_applier.go:214] obj: apiextensions.k8s.io_customresourcedefinition_kubevirts.kubevirt.io
+I1001 22:06:40.415405       1 kpt_applier.go:214] obj: scheduling.k8s.io_priorityclass_kubevirt-cluster-critical
+I1001 22:06:40.415415       1 kpt_applier.go:214] obj: apps_deployment_kubevirt_virt-operator
+I1001 22:06:40.415424       1 kpt_applier.go:214] obj: kubevirt.io_kubevirt_kubevirt_kubevirt
+I1001 22:06:40.415437       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_role_kubevirt_kubevirt-operator
+I1001 22:06:40.415447       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_rolebinding_kubevirt_kubevirt-operator-rolebinding
+I1001 22:06:40.415457       1 kpt_applier.go:214] obj: _serviceaccount_kubevirt_kubevirt-operator
+I1001 22:06:40.415466       1 kpt_applier.go:214] obj: kubevirt.io_virtualmachine_vm_testvm
+I1001 22:06:40.416418       1 kpt_applier.go:247] The applier made new progress: ErrorType events: 1.
+E1001 22:06:40.416711       1 state.go:69] Invalidating reconciler checkpoint: 1 error(s) 
+[1] KNV2009: unknown resource type: "VirtualMachine.kubevirt.io"  For more information, see https://g.co/cloud/acm-errors#knv2009 
+I1001 22:07:13.412274       1 run.go:73] The last reconciliation failed
+I1001 22:07:13.412638       1 kpt_applier.go:170] time to call NewFactory: 7.136µs
+I1001 22:07:13.413364       1 kpt_applier.go:178] time to call ToRESTMapper: 675.563µs
+I1001 22:07:13.413533       1 kpt_applier.go:195] 13 objects to be applied: [_namespace_kubevirt _namespace_vm _serviceaccount_kubevirt_kubevirt-operator apiextensions.k8s.io_customresourcedefinition_kubevirts.kubevirt.io apps_deployment_kubevirt_virt-operator kubevirt.io_kubevirt_kubevirt_kubevirt kubevirt.io_virtualmachine_vm_testvm rbac.authorization.k8s.io_clusterrole_kubevirt-operator rbac.authorization.k8s.io_clusterrole_kubevirt.io:operator rbac.authorization.k8s.io_clusterrolebinding_kubevirt-operator rbac.authorization.k8s.io_role_kubevirt_kubevirt-operator rbac.authorization.k8s.io_rolebinding_kubevirt_kubevirt-operator-rolebinding scheduling.k8s.io_priorityclass_kubevirt-cluster-critical]
+I1001 22:07:13.414593       1 kpt_applier.go:214] obj: _namespace_kubevirt
+I1001 22:07:13.414655       1 kpt_applier.go:214] obj: _namespace_vm
+I1001 22:07:13.414683       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_clusterrole_kubevirt-operator
+I1001 22:07:13.414709       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_clusterrole_kubevirt.io:operator
+I1001 22:07:13.414733       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_clusterrolebinding_kubevirt-operator
+I1001 22:07:13.414758       1 kpt_applier.go:214] obj: apiextensions.k8s.io_customresourcedefinition_kubevirts.kubevirt.io
+I1001 22:07:13.414781       1 kpt_applier.go:214] obj: scheduling.k8s.io_priorityclass_kubevirt-cluster-critical
+I1001 22:07:13.414828       1 kpt_applier.go:214] obj: apps_deployment_kubevirt_virt-operator
+I1001 22:07:13.414854       1 kpt_applier.go:214] obj: kubevirt.io_kubevirt_kubevirt_kubevirt
+I1001 22:07:13.414879       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_role_kubevirt_kubevirt-operator
+I1001 22:07:13.414905       1 kpt_applier.go:214] obj: rbac.authorization.k8s.io_rolebinding_kubevirt_kubevirt-operator-rolebinding
+I1001 22:07:13.414929       1 kpt_applier.go:214] obj: _serviceaccount_kubevirt_kubevirt-operator
+I1001 22:07:13.414954       1 kpt_applier.go:214] obj: kubevirt.io_virtualmachine_vm_testvm
+I1001 22:07:13.415850       1 kpt_applier.go:247] The applier made new progress: ErrorType events: 1.
+E1001 22:07:13.416095       1 state.go:69] Invalidating reconciler checkpoint: 1 error(s) 
+[1] KNV2009: unknown resource type: "VirtualMachine.kubevirt.io"  For more information, see https://g.co/cloud/acm-errors#knv2009 

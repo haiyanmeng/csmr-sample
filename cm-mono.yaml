@@ -4,9 +4,9 @@ kind: ConfigManagement
 metadata:
   name: config-management
 spec:
-  clusterName: cluster-3
+  #clusterName: cluster-1
   sourceFormat: unstructured
   git:
     syncRepo: https://github.com/haiyanmeng/csmr-sample
-    policyDir: "cluster-dev"
+    policyDir: test
     secretType: none

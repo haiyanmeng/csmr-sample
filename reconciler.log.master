@@ -1,0 +1,20 @@
+I0817 11:39:48.101173       1 setup.go:15] Build Version: 
+I0817 11:39:48.114186       1 main.go:161] Starting reconciler for: root
+I0817 11:39:49.165248       1 request.go:655] Throttling request took 1.031607137s, request: GET:https://10.8.0.1:443/apis/networking.gke.io/v1beta2?timeout=5s
+I0817 11:39:56.177272       1 run.go:222] New git changes (/repo/source/a14ef2cfc93852174c1f5c19184ec5c55668533a/bookstore) detected, reset the cache
+I0817 11:39:56.177323       1 git.go:72] Reading updated configs dir: /repo/source/a14ef2cfc93852174c1f5c19184ec5c55668533a/bookstore
+I0817 11:39:56.614432       1 root.go:92] Parsing files from git dir: /repo/source/a14ef2cfc93852174c1f5c19184ec5c55668533a/bookstore
+I0817 11:39:56.615506       1 reader.go:61] obj: map[apiVersion:apps/v1 kind:Deployment metadata:map[annotations:map[client.lifecycle.config.k8s.io/mutation:ignore] labels:map[] name:nginx namespace:bookstore] spec:map[minReadySeconds:9 replicas:1 selector:map[matchLabels:map[app:nginx]] template:map[metadata:map[labels:map[app:nginx]] spec:map[containers:[map[image:nginx:1.7.9 imagePullPolicy:IfNotPresent name:nginx ports:[map[containerPort:80 protocol:TCP]]]]]]]]
+I0817 11:39:56.615552       1 reader.go:61] obj: map[apiVersion:apps/v1 kind:Deployment metadata:map[annotations:map[configmanagement.gke.io/managed:disabled] labels:map[] name:nginx1 namespace:bookstore] spec:map[minReadySeconds:9 replicas:1 selector:map[matchLabels:map[app:nginx1]] template:map[metadata:map[labels:map[app:nginx1]] spec:map[containers:[map[image:nginx:1.7.9 imagePullPolicy:IfNotPresent name:nginx ports:[map[containerPort:80 protocol:TCP]]]]]]]]
+I0817 11:39:56.615690       1 reader.go:61] obj: map[apiVersion:v1 kind:Namespace metadata:map[annotations:map[] labels:map[] name:ns]]
+I0817 11:39:56.615926       1 value.go:72] &{map[apiVersion:apps/v1 kind:Deployment metadata:map[annotations:map[client.lifecycle.config.k8s.io/mutation:ignore] labels:map[] name:nginx namespace:bookstore] spec:map[minReadySeconds:9 replicas:1 selector:map[matchLabels:map[app:nginx]] template:map[metadata:map[labels:map[app:nginx]] spec:map[containers:[map[image:nginx:1.7.9 imagePullPolicy:IfNotPresent name:nginx ports:[map[containerPort:80 protocol:TCP]]]]]]]]}
+I0817 11:39:56.616393       1 value.go:72] &{map[apiVersion:apps/v1 kind:Deployment metadata:map[annotations:map[configmanagement.gke.io/managed:disabled] labels:map[] name:nginx1 namespace:bookstore] spec:map[minReadySeconds:9 replicas:1 selector:map[matchLabels:map[app:nginx1]] template:map[metadata:map[labels:map[app:nginx1]] spec:map[containers:[map[image:nginx:1.7.9 imagePullPolicy:IfNotPresent name:nginx ports:[map[containerPort:80 protocol:TCP]]]]]]]]}
+I0817 11:39:56.616492       1 value.go:72] &{map[apiVersion:v1 kind:Namespace metadata:map[annotations:map[] labels:map[] name:ns]]}
+I0817 11:39:57.471621       1 kpt_applier.go:220] The applier made new progress: ApplyEvent events (OpType: ServersideApplied): 3, disabled 1 out of 1 objects.
+I0817 11:39:57.472212       1 filteredwatcher.go:172] Watch started for /v1, Kind=Namespace
+I0817 11:39:57.472442       1 manager.go:158] The remediator made new progress: started 2 new watches, and stopped 0 watches
+I0817 11:39:57.472688       1 filteredwatcher.go:172] Watch started for apps/v1, Kind=Deployment
+I0817 11:39:57.477351       1 filteredwatcher.go:191] (Re)starting watch for /v1, Kind=Namespace at resource version ""
+I0817 11:39:57.478839       1 filteredwatcher.go:191] (Re)starting watch for apps/v1, Kind=Deployment at resource version ""
+I0817 11:39:57.552736       1 state.go:58] Reconciler checkpoint updated to /repo/source/a14ef2cfc93852174c1f5c19184ec5c55668533a/bookstore
+I0817 11:39:57.577828       1 client.go:94] Deleted "/v1, Kind=Namespace", "/kubevirt"

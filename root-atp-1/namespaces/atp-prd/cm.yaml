@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cm1
+  namespace: atp-prd
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cm1
+  namespace: atp-prd

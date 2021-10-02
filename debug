@@ -1,0 +1,8 @@
+configsync.gke.io/declared-fields: '{"f:metadata":{"f:annotations":{"f:client.lifecycle.config.k8s.io/mutation":{}},"f:labels":{}},"f:spec":{"f:minReadySeconds":{},"f:replicas":{},"f:selector":{},"f:template":{"f:metadata":{"f:labels":{"f:app":{}}},"f:spec":{"f:containers":{"k:{\"name\":\"nginx\"}":{".":{},"f:image":{},"f:imagePullPolicy":{},"f:name":{},"f:ports":{"k:{\"containerPort\":80,\"protocol\":\"TCP\"}":{".":{},"f:containerPort":{},"f:protocol":{}}}}}}}}}'
+
+configsync.gke.io/declared-fields: '{"f:metadata":{"f:annotations":{"f:client.lifecycle.config.k8s.io/mutation":{}}},"f:spec":{"f:minReadySeconds":{},"f:replicas":{},"f:selector":{},"f:template":{"f:metadata":{"f:labels":{"f:app":{}}},"f:spec":{"f:containers":{"k:{\"name\":\"nginx\"}":{".":{},"f:image":{},"f:imagePullPolicy":{},"f:name":{},"f:ports":{"k:{\"containerPort\":80,\"protocol\":\"TCP\"}":{".":{},"f:containerPort":{},"f:protocol":{}}}}}}}}}'
+
+
+Empty ns:
+configsync.gke.io/declared-fields: '{}'
+configsync.gke.io/declared-fields: '{"f:metadata":{"f:annotations":{},"f:labels":{}}}'

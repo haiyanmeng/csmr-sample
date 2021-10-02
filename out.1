@@ -1,0 +1,122 @@
+I0902 02:04:10.058291       1 setup.go:15] Build Version: 
+I0902 02:04:10.069067       1 main.go:161] Starting reconciler for: root
+I0902 02:04:18.423256       1 run.go:238] New git changes (/repo/source/13165e90847e53dd1b61114c534dda733b427855/crd) detected, reset the cache
+I0902 02:04:18.423296       1 git.go:71] Reading updated configs dir: /repo/source/13165e90847e53dd1b61114c534dda733b427855/crd
+I0902 02:04:19.093811       1 root.go:92] Parsing files from git dir: /repo/source/13165e90847e53dd1b61114c534dda733b427855/crd
+I0902 02:04:19.946841       1 kpt_applier.go:194] obj: apiextensions.k8s.io_customresourcedefinition_crontabs.stable.example.com
+I0902 02:04:19.946870       1 kpt_applier.go:194] obj: stable.example.com_crontab_default_my-cron-object
+I0902 02:04:19.946878       1 kpt_applier.go:194] obj: _namespace_default
+I0902 02:04:21.276287       1 kpt_applier.go:122] applied [op: ServersideApplied] resource Namespace, /default
+I0902 02:04:21.608904       1 kpt_applier.go:122] applied [op: ServersideApplied] resource CustomResourceDefinition.apiextensions.k8s.io, /crontabs.stable.example.com
+I0902 02:04:24.288555       1 kpt_applier.go:122] applied [op: ServersideApplied] resource CronTab.stable.example.com, default/my-cron-object
+I0902 02:04:24.829205       1 kpt_applier.go:221] all resources are up to date.
+I0902 02:04:24.829239       1 kpt_applier.go:227] The applier made new progress: ApplyEvent events (OpType: ServersideApplied): 3.
+I0902 02:04:24.829737       1 filteredwatcher.go:172] Watch started for apiextensions.k8s.io/v1, Kind=CustomResourceDefinition
+I0902 02:04:24.835365       1 filteredwatcher.go:191] (Re)starting watch for apiextensions.k8s.io/v1, Kind=CustomResourceDefinition at resource version ""
+I0902 02:04:25.688212       1 filteredwatcher.go:172] Watch started for stable.example.com/v1, Kind=CronTab
+I0902 02:04:25.688859       1 manager.go:158] The remediator made new progress: started 3 new watches, and stopped 0 watches
+I0902 02:04:25.688887       1 filteredwatcher.go:172] Watch started for /v1, Kind=Namespace
+I0902 02:04:25.694524       1 filteredwatcher.go:191] (Re)starting watch for stable.example.com/v1, Kind=CronTab at resource version ""
+I0902 02:04:25.696519       1 filteredwatcher.go:191] (Re)starting watch for /v1, Kind=Namespace at resource version ""
+E0902 02:04:26.584877       1 state.go:69] Invalidating reconciler checkpoint: 1 error(s) 
+[1] KNV2002: failed to update RootSync sync status from parser: APIServer error: Operation cannot be fulfilled on rootsyncs.configsync.gke.io "root-sync": the object has been modified; please apply your changes to the latest version and try again  For more information, see https://g.co/cloud/acm-errors#knv2002 
+I0902 02:04:28.423658       1 run.go:73] The last reconciliation failed
+I0902 02:04:28.466539       1 state.go:57] Reconciler checkpoint updated to /repo/source/13165e90847e53dd1b61114c534dda733b427855/crd
+E0902 02:06:03.448933       1 state.go:69] Invalidating reconciler checkpoint: 1 error(s) 
+[1] KNV9997: rendering in progress for commit 5b1b948a22444f60013117a4cacae0ee661dd15e  For more information, see https://g.co/cloud/acm-errors#knv9997 
+I0902 02:06:05.422783       1 run.go:73] The last reconciliation failed
+I0902 02:06:05.423175       1 run.go:238] New git changes (/repo/source/5b1b948a22444f60013117a4cacae0ee661dd15e/crd) detected, reset the cache
+I0902 02:06:05.423240       1 git.go:71] Reading updated configs dir: /repo/source/5b1b948a22444f60013117a4cacae0ee661dd15e/crd
+I0902 02:06:05.479330       1 root.go:92] Parsing files from git dir: /repo/source/5b1b948a22444f60013117a4cacae0ee661dd15e/crd
+I0902 02:06:05.497963       1 kpt_applier.go:194] obj: apiextensions.k8s.io_customresourcedefinition_crontabs.stable.example.com
+I0902 02:06:05.499435       1 kpt_applier.go:194] obj: stable.example.com_crontab_default_my-new-cron-object
+I0902 02:06:05.500196       1 kpt_applier.go:194] obj: _namespace_default
+I0902 02:06:05.647483       1 kpt_applier.go:122] applied [op: ServersideApplied] resource Namespace, /default
+I0902 02:06:05.781445       1 kpt_applier.go:122] applied [op: ServersideApplied] resource CustomResourceDefinition.apiextensions.k8s.io, /crontabs.stable.example.com
+I0902 02:06:06.784178       1 filteredwatcher.go:220] Ending watch for stable.example.com/v1, Kind=CronTab at resource version "1042286" (total events: 2, ignored events: 0)
+I0902 02:06:06.863883       1 filteredwatcher.go:191] (Re)starting watch for stable.example.com/v1, Kind=CronTab at resource version "1042286"
+I0902 02:06:06.864203       1 filteredwatcher.go:201] Watch for stable.example.com/v1, Kind=CronTab at resource version "1042286" closed with: too old resource version: 1042286 (1042628)
+I0902 02:06:06.866644       1 filteredwatcher.go:220] Ending watch for stable.example.com/v1, Kind=CronTab at resource version "" (total events: 1, ignored events: 0)
+I0902 02:06:06.875744       1 filteredwatcher.go:191] (Re)starting watch for stable.example.com/v1, Kind=CronTab at resource version ""
+I0902 02:06:06.928866       1 client.go:94] Deleted "stable.example.com/v1, Kind=CronTab", "default/my-cron-object"
+W0902 02:06:06.929193       1 diff.go:81] Calculated diff for object with no declaration and not on the cluster
+I0902 02:06:07.810341       1 kpt_applier.go:227] The applier made new progress: ApplyEvent events (OpType: ServersideApplied): 2, ErrorType events: 1.
+E0902 02:06:07.860899       1 state.go:69] Invalidating reconciler checkpoint: 1 error(s) 
+[1] KNV2009: timeout after 2 seconds waiting for 2 resources to reach condition AllCurrent  For more information, see https://g.co/cloud/acm-errors#knv2009 
+I0902 02:06:09.422828       1 run.go:73] The last reconciliation failed
+I0902 02:06:09.423454       1 kpt_applier.go:194] obj: apiextensions.k8s.io_customresourcedefinition_crontabs.stable.example.com
+I0902 02:06:09.423475       1 kpt_applier.go:194] obj: stable.example.com_crontab_default_my-new-cron-object
+I0902 02:06:09.423482       1 kpt_applier.go:194] obj: _namespace_default
+I0902 02:06:09.620068       1 kpt_applier.go:227] The applier made new progress: ErrorType events: 1.
+E0902 02:06:09.762484       1 state.go:69] Invalidating reconciler checkpoint: 1 error(s) 
+[1] KNV2009: crontabs.stable.example.com "my-cron-object" not found  For more information, see https://g.co/cloud/acm-errors#knv2009 
+I0902 02:06:11.422840       1 run.go:73] The last reconciliation failed
+I0902 02:06:11.423124       1 kpt_applier.go:194] obj: apiextensions.k8s.io_customresourcedefinition_crontabs.stable.example.com
+I0902 02:06:11.423137       1 kpt_applier.go:194] obj: stable.example.com_crontab_default_my-new-cron-object
+I0902 02:06:11.423143       1 kpt_applier.go:194] obj: _namespace_default
+I0902 02:06:11.443104       1 kpt_applier.go:227] The applier made new progress: ErrorType events: 1.
+E0902 02:06:11.443258       1 state.go:69] Invalidating reconciler checkpoint: 1 error(s) 
+[1] KNV2009: crontabs.stable.example.com "my-cron-object" not found  For more information, see https://g.co/cloud/acm-errors#knv2009 
+I0902 02:06:13.423052       1 run.go:73] The last reconciliation failed
+I0902 02:06:13.423290       1 kpt_applier.go:194] obj: apiextensions.k8s.io_customresourcedefinition_crontabs.stable.example.com
+I0902 02:06:13.423349       1 kpt_applier.go:194] obj: stable.example.com_crontab_default_my-new-cron-object
+I0902 02:06:13.423391       1 kpt_applier.go:194] obj: _namespace_default
+I0902 02:06:13.453711       1 kpt_applier.go:227] The applier made new progress: ErrorType events: 1.
+E0902 02:06:13.453943       1 state.go:69] Invalidating reconciler checkpoint: 1 error(s) 
+[1] KNV2009: crontabs.stable.example.com "my-cron-object" not found  For more information, see https://g.co/cloud/acm-errors#knv2009 
+I0902 02:06:15.422449       1 run.go:73] The last reconciliation failed
+I0902 02:06:15.422921       1 kpt_applier.go:194] obj: apiextensions.k8s.io_customresourcedefinition_crontabs.stable.example.com
+I0902 02:06:15.422990       1 kpt_applier.go:194] obj: stable.example.com_crontab_default_my-new-cron-object
+I0902 02:06:15.423016       1 kpt_applier.go:194] obj: _namespace_default
+I0902 02:06:15.440898       1 kpt_applier.go:227] The applier made new progress: ErrorType events: 1.
+E0902 02:06:15.441448       1 state.go:69] Invalidating reconciler checkpoint: 1 error(s) 
+[1] KNV2009: crontabs.stable.example.com "my-cron-object" not found  For more information, see https://g.co/cloud/acm-errors#knv2009 
+I0902 02:06:17.423089       1 run.go:73] The last reconciliation failed
+I0902 02:06:17.423408       1 kpt_applier.go:194] obj: apiextensions.k8s.io_customresourcedefinition_crontabs.stable.example.com
+I0902 02:06:17.423428       1 kpt_applier.go:194] obj: stable.example.com_crontab_default_my-new-cron-object
+I0902 02:06:17.423435       1 kpt_applier.go:194] obj: _namespace_default
+I0902 02:06:17.452410       1 kpt_applier.go:227] The applier made new progress: ErrorType events: 1.
+E0902 02:06:17.452565       1 state.go:69] Invalidating reconciler checkpoint: 1 error(s) 
+[1] KNV2009: crontabs.stable.example.com "my-cron-object" not found  For more information, see https://g.co/cloud/acm-errors#knv2009 
+I0902 02:06:19.422836       1 run.go:73] The last reconciliation failed
+I0902 02:06:19.423234       1 kpt_applier.go:194] obj: apiextensions.k8s.io_customresourcedefinition_crontabs.stable.example.com
+I0902 02:06:19.423255       1 kpt_applier.go:194] obj: stable.example.com_crontab_default_my-new-cron-object
+I0902 02:06:19.423262       1 kpt_applier.go:194] obj: _namespace_default
+I0902 02:06:19.471233       1 kpt_applier.go:227] The applier made new progress: ErrorType events: 1.
+E0902 02:06:19.472044       1 state.go:69] Invalidating reconciler checkpoint: 1 error(s) 
+[1] KNV2009: crontabs.stable.example.com "my-cron-object" not found  For more information, see https://g.co/cloud/acm-errors#knv2009 
+I0902 02:06:22.422798       1 run.go:73] The last reconciliation failed
+I0902 02:06:22.423294       1 kpt_applier.go:194] obj: apiextensions.k8s.io_customresourcedefinition_crontabs.stable.example.com
+I0902 02:06:22.423437       1 kpt_applier.go:194] obj: stable.example.com_crontab_default_my-new-cron-object
+I0902 02:06:22.423534       1 kpt_applier.go:194] obj: _namespace_default
+I0902 02:06:22.449942       1 kpt_applier.go:227] The applier made new progress: ErrorType events: 1.
+E0902 02:06:22.450645       1 state.go:69] Invalidating reconciler checkpoint: 1 error(s) 
+[1] KNV2009: crontabs.stable.example.com "my-cron-object" not found  For more information, see https://g.co/cloud/acm-errors#knv2009 
+I0902 02:06:27.423316       1 run.go:73] The last reconciliation failed
+I0902 02:06:27.423940       1 kpt_applier.go:194] obj: apiextensions.k8s.io_customresourcedefinition_crontabs.stable.example.com
+I0902 02:06:27.424101       1 kpt_applier.go:194] obj: stable.example.com_crontab_default_my-new-cron-object
+I0902 02:06:27.424145       1 kpt_applier.go:194] obj: _namespace_default
+I0902 02:06:27.448855       1 kpt_applier.go:227] The applier made new progress: ErrorType events: 1.
+E0902 02:06:27.449247       1 state.go:69] Invalidating reconciler checkpoint: 1 error(s) 
+[1] KNV2009: crontabs.stable.example.com "my-cron-object" not found  For more information, see https://g.co/cloud/acm-errors#knv2009 
+I0902 02:06:36.423168       1 run.go:73] The last reconciliation failed
+I0902 02:06:36.423776       1 kpt_applier.go:194] obj: apiextensions.k8s.io_customresourcedefinition_crontabs.stable.example.com
+I0902 02:06:36.423801       1 kpt_applier.go:194] obj: stable.example.com_crontab_default_my-new-cron-object
+I0902 02:06:36.423808       1 kpt_applier.go:194] obj: _namespace_default
+I0902 02:06:36.459905       1 kpt_applier.go:227] The applier made new progress: ErrorType events: 1.
+E0902 02:06:36.460646       1 state.go:69] Invalidating reconciler checkpoint: 1 error(s) 
+[1] KNV2009: crontabs.stable.example.com "my-cron-object" not found  For more information, see https://g.co/cloud/acm-errors#knv2009 
+I0902 02:06:53.422908       1 run.go:73] The last reconciliation failed
+I0902 02:06:53.423089       1 kpt_applier.go:194] obj: apiextensions.k8s.io_customresourcedefinition_crontabs.stable.example.com
+I0902 02:06:53.423104       1 kpt_applier.go:194] obj: stable.example.com_crontab_default_my-new-cron-object
+I0902 02:06:53.423110       1 kpt_applier.go:194] obj: _namespace_default
+I0902 02:06:53.443898       1 kpt_applier.go:227] The applier made new progress: ErrorType events: 1.
+E0902 02:06:53.444542       1 state.go:69] Invalidating reconciler checkpoint: 1 error(s) 
+[1] KNV2009: crontabs.stable.example.com "my-cron-object" not found  For more information, see https://g.co/cloud/acm-errors#knv2009 
+I0902 02:07:26.422819       1 run.go:73] The last reconciliation failed
+I0902 02:07:26.423077       1 kpt_applier.go:194] obj: apiextensions.k8s.io_customresourcedefinition_crontabs.stable.example.com
+I0902 02:07:26.423084       1 kpt_applier.go:194] obj: stable.example.com_crontab_default_my-new-cron-object
+I0902 02:07:26.423088       1 kpt_applier.go:194] obj: _namespace_default
+I0902 02:07:26.442977       1 kpt_applier.go:227] The applier made new progress: ErrorType events: 1.
+E0902 02:07:26.443128       1 state.go:69] Invalidating reconciler checkpoint: 1 error(s) 
+[1] KNV2009: crontabs.stable.example.com "my-cron-object" not found  For more information, see https://g.co/cloud/acm-errors#knv2009 

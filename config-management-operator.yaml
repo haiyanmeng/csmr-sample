@@ -193,6 +193,20 @@ status:
   conditions: []
   storedVersions: []
 ---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: config-management-system
+  labels:
+    configmanagement.gke.io/system: "true"
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: config-management-monitoring
+  labels:
+    configmanagement.gke.io/system: "true"
+---
 # The Nomos system creates RBAC rules, so it requires
 # full cluster-admin access. Thus, the operator needs
 # to be able to grant tha permission to the installed
@@ -221,7 +235,7 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: config-management-operator
-  namespace: kube-system
+  namespace: config-management-system
 ---
 apiVersion: v1
 kind: ServiceAccount
@@ -229,13 +243,13 @@ metadata:
   labels:
     k8s-app: config-management-operator
   name: config-management-operator
-  namespace: kube-system
+  namespace: config-management-system
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: config-management-operator
-  namespace: kube-system
+  namespace: config-management-system
   labels:
     k8s-app: config-management-operator
 spec:
@@ -259,7 +273,7 @@ spec:
         - /manager
         - --private-registry=
         name: manager
-        image: gcr.io/config-management-release/config-management-operator:20210609013330-op
+        image: gcr.io/config-management-release/config-management-operator:20210903172607-op
         resources:
           requests:
             cpu: 100m
@@ -272,17 +286,3 @@ spec:
             name: operator-environment-options
             optional: true
       serviceAccount: config-management-operator
----
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: config-management-system
-  labels:
-    configmanagement.gke.io/system: "true"
----
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: config-management-monitoring
-  labels:
-    configmanagement.gke.io/system: "true"

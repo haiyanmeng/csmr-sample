@@ -6,7 +6,8 @@ metadata:
   namespace: config-management-system
 spec:
   git:
-    repo: https://github.com/haiyanmeng/csmr-sample
-    dir: "kubevirt"
+    noSSLVerify: true
+    repo: https://github.com/haiyanmeng/kubevirt
+    branch: main
     auth: none
   sourceFormat: unstructured

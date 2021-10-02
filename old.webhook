@@ -1,0 +1,225 @@
+apiVersion: admissionregistration.k8s.io/v1
+kind: ValidatingWebhookConfiguration
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"admissionregistration.k8s.io/v1","kind":"ValidatingWebhookConfiguration","metadata":{"annotations":{},"labels":{"configmanagement.gke.io/arch":"csmr","configmanagement.gke.io/configmanagement":"config-management","configmanagement.gke.io/system":"true","k8s-app":"kubernetes-config-management"},"name":"admission-webhook.configsync.gke.io","ownerReferences":[{"apiVersion":"configmanagement.gke.io/v1","blockOwnerDeletion":true,"controller":true,"kind":"ConfigManagement","name":"config-management","uid":"1cb3f523-3bac-422b-b91e-27a4c94da5ab"}]}}
+  creationTimestamp: "2021-09-15T00:01:30Z"
+  generation: 3
+  labels:
+    configmanagement.gke.io/arch: csmr
+    configmanagement.gke.io/configmanagement: config-management
+    configmanagement.gke.io/system: "true"
+    k8s-app: kubernetes-config-management
+  managedFields:
+  - apiVersion: admissionregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:labels:
+          .: {}
+          f:configmanagement.gke.io/arch: {}
+          f:configmanagement.gke.io/configmanagement: {}
+          f:configmanagement.gke.io/system: {}
+          f:k8s-app: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"1cb3f523-3bac-422b-b91e-27a4c94da5ab"}:
+            .: {}
+            f:apiVersion: {}
+            f:blockOwnerDeletion: {}
+            f:controller: {}
+            f:kind: {}
+            f:name: {}
+            f:uid: {}
+    manager: Go-http-client
+    operation: Update
+    time: "2021-09-15T00:01:30Z"
+  - apiVersion: admissionregistration.k8s.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:webhooks:
+        k:{"name":"apiextensions.k8s.io.v1.admission-webhook.configsync.gke.io"}:
+          f:clientConfig:
+            f:caBundle: {}
+        k:{"name":"example.com.v1beta1.admission-webhook.configsync.gke.io"}:
+          f:clientConfig:
+            f:caBundle: {}
+        k:{"name":"v1.admission-webhook.configsync.gke.io"}:
+          f:clientConfig:
+            f:caBundle: {}
+    manager: admission-webhook
+    operation: Update
+    time: "2021-09-15T00:02:19Z"
+  - apiVersion: admissionregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:webhooks:
+        .: {}
+        k:{"name":"apiextensions.k8s.io.v1.admission-webhook.configsync.gke.io"}:
+          .: {}
+          f:admissionReviewVersions: {}
+          f:clientConfig:
+            .: {}
+            f:service:
+              .: {}
+              f:name: {}
+              f:namespace: {}
+              f:path: {}
+              f:port: {}
+          f:failurePolicy: {}
+          f:matchPolicy: {}
+          f:name: {}
+          f:namespaceSelector: {}
+          f:objectSelector: {}
+          f:rules: {}
+          f:sideEffects: {}
+          f:timeoutSeconds: {}
+        k:{"name":"example.com.v1beta1.admission-webhook.configsync.gke.io"}:
+          .: {}
+          f:admissionReviewVersions: {}
+          f:clientConfig:
+            .: {}
+            f:service:
+              .: {}
+              f:name: {}
+              f:namespace: {}
+              f:path: {}
+              f:port: {}
+          f:failurePolicy: {}
+          f:matchPolicy: {}
+          f:name: {}
+          f:namespaceSelector: {}
+          f:objectSelector: {}
+          f:rules: {}
+          f:sideEffects: {}
+          f:timeoutSeconds: {}
+        k:{"name":"v1.admission-webhook.configsync.gke.io"}:
+          .: {}
+          f:admissionReviewVersions: {}
+          f:clientConfig:
+            .: {}
+            f:service:
+              .: {}
+              f:name: {}
+              f:namespace: {}
+              f:path: {}
+              f:port: {}
+          f:failurePolicy: {}
+          f:matchPolicy: {}
+          f:name: {}
+          f:namespaceSelector: {}
+          f:objectSelector: {}
+          f:rules: {}
+          f:sideEffects: {}
+          f:timeoutSeconds: {}
+    manager: reconciler
+    operation: Update
+    time: "2021-09-15T00:02:19Z"
+  name: admission-webhook.configsync.gke.io
+  ownerReferences:
+  - apiVersion: configmanagement.gke.io/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ConfigManagement
+    name: config-management
+    uid: 1cb3f523-3bac-422b-b91e-27a4c94da5ab
+  resourceVersion: "665066"
+  uid: fd8fd80b-1fe9-4807-ab91-96d99659f7fc
+webhooks:
+- admissionReviewVersions:
+  - v1
+  - v1beta1
+  clientConfig:
+    caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURGekNDQWYrZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREF2TVJRd0VnWURWUVFLRXd0amIyNW0KYVdjdGMzbHVZekVYTUJVR0ExVUVBeE1PWTI5dVptbG5MWE41Ym1NdFkyRXdIaGNOTWpFd09URTBNak13TVRNMgpXaGNOTXpFd09URXpNREF3TVRNMldqQXZNUlF3RWdZRFZRUUtFd3RqYjI1bWFXY3RjM2x1WXpFWE1CVUdBMVVFCkF4TU9ZMjl1Wm1sbkxYTjVibU10WTJFd2dnRWlNQTBHQ1NxR1NJYjNEUUVCQVFVQUE0SUJEd0F3Z2dFS0FvSUIKQVFEbFV3YzBNT2VtQ1JpbWVqMGI5QVpNaWd2UTlvLzdROFhHRk9GWC9ZTCtZbGdCbmhWSEtyYTV4ajBYTW4vTgpTK0Q0dWFRMjQrSFFSRk9qSjBjRGVtNXVLb3BTYjRQSTUwVEZUNlhuUWVXa0NHc3ZPenFmWlZXOVk5anZka0RZCjEweWhqTE9pOG9JWTcwNmN4K2pJaitEcDBOT1VKdE90VER4QTY5ZXI2U0EwOGZTZ2w4WGtWZWpwdkdEZzU2MnYKd1hFR3RsZXlwVlVXL3VCSUV2eUZyZ0VYVjNobTJNRGR1NytMUElQNG5KdXUyUDRwdUxkd0MvKy9ZZm5JL0ROcAp3Yms4cjYrMUl1S3lpY2creW1INm9Ha3hYd212ZFdEdk9Gc2xsQ1V2bDRsdytkRWR0c1lhemxsWllnNjJLOGxUCjAxWjNOdG9SaXBJdk9RbHNWYW1TNVhsWEFnTUJBQUdqUGpBOE1BNEdBMVVkRHdFQi93UUVBd0lDcERBUEJnTlYKSFJNQkFmOEVCVEFEQVFIL01Ca0dBMVVkRVFRU01CQ0NEbU52Ym1acFp5MXplVzVqTFdOaE1BMEdDU3FHU0liMwpEUUVCQ3dVQUE0SUJBUUF1V3V3OWVYekFJOHl5S3JaRWxPUkVCcVhEM0pZTWlsUHBzQ1ZJN0Erdy9kdlRkVjFZCjRaSERzK0pwN3FZQW43VmNzUHBJS3hYVnVOZ3M1UXRUV0JRL3VaYnRmUHNxTStnbk1kM2lCVUJ1VXpwRFBJUDYKQVk1ZVBYWUFOeUFPUFgzV0xrTUZKTjZ6TEtLMUxkMjJHMTM0Y2YyVGZ5Tkh5aVdUdXJjTnpuK2dldVZnU09TcApkSkY0RVNoU0J0MStibVhORjhESVBZUTdualVkb1pvd1VFZnMrU3prSjhsQzgxY25md1hETDlVM2p2bC9DSy9RCitJZ2FJM3BkSkNmejBoejJiT3FtNUtXNlUzbko4WTZvL1plMlp4cXliR2g5d2g5ZnRKd29XSXFZM1l0VUFGaHcKTVZqNXptRlA2bVdMZkhNMGhiQU4vU2c2U0V3ZjQ5RFVad3JXCi0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+    service:
+      name: admission-webhook
+      namespace: config-management-system
+      path: /admission-webhook
+      port: 8676
+  failurePolicy: Fail
+  matchPolicy: Equivalent
+  name: v1.admission-webhook.configsync.gke.io
+  namespaceSelector: {}
+  objectSelector:
+    matchLabels:
+      configsync.gke.io/declared-version: v1
+  rules:
+  - apiGroups:
+    - ""
+    apiVersions:
+    - v1
+    operations:
+    - CREATE
+    - UPDATE
+    - DELETE
+    resources:
+    - '*'
+    scope: '*'
+  sideEffects: None
+  timeoutSeconds: 3
+- admissionReviewVersions:
+  - v1
+  - v1beta1
+  clientConfig:
+    caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURGekNDQWYrZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREF2TVJRd0VnWURWUVFLRXd0amIyNW0KYVdjdGMzbHVZekVYTUJVR0ExVUVBeE1PWTI5dVptbG5MWE41Ym1NdFkyRXdIaGNOTWpFd09URTBNak13TVRNMgpXaGNOTXpFd09URXpNREF3TVRNMldqQXZNUlF3RWdZRFZRUUtFd3RqYjI1bWFXY3RjM2x1WXpFWE1CVUdBMVVFCkF4TU9ZMjl1Wm1sbkxYTjVibU10WTJFd2dnRWlNQTBHQ1NxR1NJYjNEUUVCQVFVQUE0SUJEd0F3Z2dFS0FvSUIKQVFEbFV3YzBNT2VtQ1JpbWVqMGI5QVpNaWd2UTlvLzdROFhHRk9GWC9ZTCtZbGdCbmhWSEtyYTV4ajBYTW4vTgpTK0Q0dWFRMjQrSFFSRk9qSjBjRGVtNXVLb3BTYjRQSTUwVEZUNlhuUWVXa0NHc3ZPenFmWlZXOVk5anZka0RZCjEweWhqTE9pOG9JWTcwNmN4K2pJaitEcDBOT1VKdE90VER4QTY5ZXI2U0EwOGZTZ2w4WGtWZWpwdkdEZzU2MnYKd1hFR3RsZXlwVlVXL3VCSUV2eUZyZ0VYVjNobTJNRGR1NytMUElQNG5KdXUyUDRwdUxkd0MvKy9ZZm5JL0ROcAp3Yms4cjYrMUl1S3lpY2creW1INm9Ha3hYd212ZFdEdk9Gc2xsQ1V2bDRsdytkRWR0c1lhemxsWllnNjJLOGxUCjAxWjNOdG9SaXBJdk9RbHNWYW1TNVhsWEFnTUJBQUdqUGpBOE1BNEdBMVVkRHdFQi93UUVBd0lDcERBUEJnTlYKSFJNQkFmOEVCVEFEQVFIL01Ca0dBMVVkRVFRU01CQ0NEbU52Ym1acFp5MXplVzVqTFdOaE1BMEdDU3FHU0liMwpEUUVCQ3dVQUE0SUJBUUF1V3V3OWVYekFJOHl5S3JaRWxPUkVCcVhEM0pZTWlsUHBzQ1ZJN0Erdy9kdlRkVjFZCjRaSERzK0pwN3FZQW43VmNzUHBJS3hYVnVOZ3M1UXRUV0JRL3VaYnRmUHNxTStnbk1kM2lCVUJ1VXpwRFBJUDYKQVk1ZVBYWUFOeUFPUFgzV0xrTUZKTjZ6TEtLMUxkMjJHMTM0Y2YyVGZ5Tkh5aVdUdXJjTnpuK2dldVZnU09TcApkSkY0RVNoU0J0MStibVhORjhESVBZUTdualVkb1pvd1VFZnMrU3prSjhsQzgxY25md1hETDlVM2p2bC9DSy9RCitJZ2FJM3BkSkNmejBoejJiT3FtNUtXNlUzbko4WTZvL1plMlp4cXliR2g5d2g5ZnRKd29XSXFZM1l0VUFGaHcKTVZqNXptRlA2bVdMZkhNMGhiQU4vU2c2U0V3ZjQ5RFVad3JXCi0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+    service:
+      name: admission-webhook
+      namespace: config-management-system
+      path: /admission-webhook
+      port: 8676
+  failurePolicy: Fail
+  matchPolicy: Equivalent
+  name: apiextensions.k8s.io.v1.admission-webhook.configsync.gke.io
+  namespaceSelector: {}
+  objectSelector:
+    matchLabels:
+      configsync.gke.io/declared-version: v1
+  rules:
+  - apiGroups:
+    - apiextensions.k8s.io
+    apiVersions:
+    - v1
+    operations:
+    - CREATE
+    - UPDATE
+    - DELETE
+    resources:
+    - '*'
+    scope: '*'
+  sideEffects: None
+  timeoutSeconds: 3
+- admissionReviewVersions:
+  - v1
+  - v1beta1
+  clientConfig:
+    caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURGekNDQWYrZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREF2TVJRd0VnWURWUVFLRXd0amIyNW0KYVdjdGMzbHVZekVYTUJVR0ExVUVBeE1PWTI5dVptbG5MWE41Ym1NdFkyRXdIaGNOTWpFd09URTBNak13TVRNMgpXaGNOTXpFd09URXpNREF3TVRNMldqQXZNUlF3RWdZRFZRUUtFd3RqYjI1bWFXY3RjM2x1WXpFWE1CVUdBMVVFCkF4TU9ZMjl1Wm1sbkxYTjVibU10WTJFd2dnRWlNQTBHQ1NxR1NJYjNEUUVCQVFVQUE0SUJEd0F3Z2dFS0FvSUIKQVFEbFV3YzBNT2VtQ1JpbWVqMGI5QVpNaWd2UTlvLzdROFhHRk9GWC9ZTCtZbGdCbmhWSEtyYTV4ajBYTW4vTgpTK0Q0dWFRMjQrSFFSRk9qSjBjRGVtNXVLb3BTYjRQSTUwVEZUNlhuUWVXa0NHc3ZPenFmWlZXOVk5anZka0RZCjEweWhqTE9pOG9JWTcwNmN4K2pJaitEcDBOT1VKdE90VER4QTY5ZXI2U0EwOGZTZ2w4WGtWZWpwdkdEZzU2MnYKd1hFR3RsZXlwVlVXL3VCSUV2eUZyZ0VYVjNobTJNRGR1NytMUElQNG5KdXUyUDRwdUxkd0MvKy9ZZm5JL0ROcAp3Yms4cjYrMUl1S3lpY2creW1INm9Ha3hYd212ZFdEdk9Gc2xsQ1V2bDRsdytkRWR0c1lhemxsWllnNjJLOGxUCjAxWjNOdG9SaXBJdk9RbHNWYW1TNVhsWEFnTUJBQUdqUGpBOE1BNEdBMVVkRHdFQi93UUVBd0lDcERBUEJnTlYKSFJNQkFmOEVCVEFEQVFIL01Ca0dBMVVkRVFRU01CQ0NEbU52Ym1acFp5MXplVzVqTFdOaE1BMEdDU3FHU0liMwpEUUVCQ3dVQUE0SUJBUUF1V3V3OWVYekFJOHl5S3JaRWxPUkVCcVhEM0pZTWlsUHBzQ1ZJN0Erdy9kdlRkVjFZCjRaSERzK0pwN3FZQW43VmNzUHBJS3hYVnVOZ3M1UXRUV0JRL3VaYnRmUHNxTStnbk1kM2lCVUJ1VXpwRFBJUDYKQVk1ZVBYWUFOeUFPUFgzV0xrTUZKTjZ6TEtLMUxkMjJHMTM0Y2YyVGZ5Tkh5aVdUdXJjTnpuK2dldVZnU09TcApkSkY0RVNoU0J0MStibVhORjhESVBZUTdualVkb1pvd1VFZnMrU3prSjhsQzgxY25md1hETDlVM2p2bC9DSy9RCitJZ2FJM3BkSkNmejBoejJiT3FtNUtXNlUzbko4WTZvL1plMlp4cXliR2g5d2g5ZnRKd29XSXFZM1l0VUFGaHcKTVZqNXptRlA2bVdMZkhNMGhiQU4vU2c2U0V3ZjQ5RFVad3JXCi0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+    service:
+      name: admission-webhook
+      namespace: config-management-system
+      path: /admission-webhook
+      port: 8676
+  failurePolicy: Fail
+  matchPolicy: Equivalent
+  name: example.com.v1beta1.admission-webhook.configsync.gke.io
+  namespaceSelector: {}
+  objectSelector:
+    matchLabels:
+      configsync.gke.io/declared-version: v1beta1
+  rules:
+  - apiGroups:
+    - example.com
+    apiVersions:
+    - v1beta1
+    operations:
+    - CREATE
+    - UPDATE
+    - DELETE
+    resources:
+    - '*'
+    scope: '*'
+  sideEffects: None
+  timeoutSeconds: 3

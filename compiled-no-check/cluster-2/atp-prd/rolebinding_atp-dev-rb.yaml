@@ -1,0 +1,18 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: atp-dev-rb
+  namespace: atp-prd
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: tenant-dev-role
+subjects:
+- kind: Group
+  name: IT-APP-BDP-EDGE-GBL-ATP-DEV
+- kind: Group
+  name: IT-APP-BDP-EDGE-GBL-ATP-ADM
+- kind: ServiceAccount
+  name: atp-service-account
+  namespace: tenant-resources

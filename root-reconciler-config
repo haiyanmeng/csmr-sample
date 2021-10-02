@@ -1,0 +1,482 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    configsync.gke.io/config-checksum: c5b663fd720edce81e1e4bab30bc42d0
+    deployment.kubernetes.io/revision: "1"
+  creationTimestamp: "2021-10-01T19:36:56Z"
+  generation: 1
+  labels:
+    app: reconciler
+    configmanagement.gke.io/arch: csmr
+    configmanagement.gke.io/system: "true"
+  managedFields:
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:configsync.gke.io/config-checksum: {}
+        f:labels:
+          .: {}
+          f:app: {}
+          f:configmanagement.gke.io/arch: {}
+          f:configmanagement.gke.io/system: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"7f66c954-791a-4070-8907-c4deed6ed2f2"}:
+            .: {}
+            f:apiVersion: {}
+            f:blockOwnerDeletion: {}
+            f:controller: {}
+            f:kind: {}
+            f:name: {}
+            f:uid: {}
+      f:spec:
+        f:minReadySeconds: {}
+        f:progressDeadlineSeconds: {}
+        f:replicas: {}
+        f:revisionHistoryLimit: {}
+        f:selector: {}
+        f:strategy:
+          f:type: {}
+        f:template:
+          f:metadata:
+            f:annotations:
+              .: {}
+              f:configsync.gke.io/configmap: {}
+            f:labels:
+              .: {}
+              f:app: {}
+              f:configsync.gke.io/reconciler: {}
+          f:spec:
+            f:containers:
+              k:{"name":"git-sync"}:
+                .: {}
+                f:args: {}
+                f:envFrom: {}
+                f:image: {}
+                f:imagePullPolicy: {}
+                f:name: {}
+                f:resources:
+                  .: {}
+                  f:limits:
+                    .: {}
+                    f:cpu: {}
+                    f:memory: {}
+                  f:requests:
+                    .: {}
+                    f:cpu: {}
+                    f:memory: {}
+                f:securityContext:
+                  .: {}
+                  f:runAsUser: {}
+                f:terminationMessagePath: {}
+                f:terminationMessagePolicy: {}
+                f:volumeMounts:
+                  .: {}
+                  k:{"mountPath":"/repo"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+              k:{"name":"hydration-controller"}:
+                .: {}
+                f:args: {}
+                f:command: {}
+                f:env:
+                  .: {}
+                  k:{"name":"RECONCILER_NAME"}:
+                    .: {}
+                    f:name: {}
+                    f:valueFrom:
+                      .: {}
+                      f:fieldRef:
+                        .: {}
+                        f:apiVersion: {}
+                        f:fieldPath: {}
+                f:envFrom: {}
+                f:image: {}
+                f:imagePullPolicy: {}
+                f:name: {}
+                f:resources:
+                  .: {}
+                  f:limits:
+                    .: {}
+                    f:cpu: {}
+                    f:memory: {}
+                  f:requests:
+                    .: {}
+                    f:cpu: {}
+                    f:memory: {}
+                f:securityContext:
+                  .: {}
+                  f:runAsUser: {}
+                f:terminationMessagePath: {}
+                f:terminationMessagePolicy: {}
+                f:volumeMounts:
+                  .: {}
+                  k:{"mountPath":"/repo"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+              k:{"name":"otel-agent"}:
+                .: {}
+                f:args: {}
+                f:command: {}
+                f:image: {}
+                f:imagePullPolicy: {}
+                f:livenessProbe:
+                  .: {}
+                  f:failureThreshold: {}
+                  f:httpGet:
+                    .: {}
+                    f:path: {}
+                    f:port: {}
+                    f:scheme: {}
+                  f:periodSeconds: {}
+                  f:successThreshold: {}
+                  f:timeoutSeconds: {}
+                f:name: {}
+                f:ports:
+                  .: {}
+                  k:{"containerPort":8888,"protocol":"TCP"}:
+                    .: {}
+                    f:containerPort: {}
+                    f:protocol: {}
+                  k:{"containerPort":55678,"protocol":"TCP"}:
+                    .: {}
+                    f:containerPort: {}
+                    f:protocol: {}
+                f:readinessProbe:
+                  .: {}
+                  f:failureThreshold: {}
+                  f:httpGet:
+                    .: {}
+                    f:path: {}
+                    f:port: {}
+                    f:scheme: {}
+                  f:periodSeconds: {}
+                  f:successThreshold: {}
+                  f:timeoutSeconds: {}
+                f:resources:
+                  .: {}
+                  f:limits:
+                    .: {}
+                    f:cpu: {}
+                    f:memory: {}
+                  f:requests:
+                    .: {}
+                    f:cpu: {}
+                    f:memory: {}
+                f:terminationMessagePath: {}
+                f:terminationMessagePolicy: {}
+                f:volumeMounts:
+                  .: {}
+                  k:{"mountPath":"/conf"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+              k:{"name":"reconciler"}:
+                .: {}
+                f:args: {}
+                f:command: {}
+                f:env:
+                  .: {}
+                  k:{"name":"RECONCILER_NAME"}:
+                    .: {}
+                    f:name: {}
+                    f:valueFrom:
+                      .: {}
+                      f:fieldRef:
+                        .: {}
+                        f:apiVersion: {}
+                        f:fieldPath: {}
+                f:envFrom: {}
+                f:image: {}
+                f:imagePullPolicy: {}
+                f:name: {}
+                f:resources:
+                  .: {}
+                  f:limits:
+                    .: {}
+                    f:cpu: {}
+                    f:memory: {}
+                  f:requests:
+                    .: {}
+                    f:cpu: {}
+                    f:memory: {}
+                f:terminationMessagePath: {}
+                f:terminationMessagePolicy: {}
+                f:volumeMounts:
+                  .: {}
+                  k:{"mountPath":"/repo"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+                    f:readOnly: {}
+            f:dnsPolicy: {}
+            f:restartPolicy: {}
+            f:schedulerName: {}
+            f:securityContext:
+              .: {}
+              f:fsGroup: {}
+            f:serviceAccount: {}
+            f:serviceAccountName: {}
+            f:terminationGracePeriodSeconds: {}
+            f:volumes:
+              .: {}
+              k:{"name":"otel-agent-config-vol"}:
+                .: {}
+                f:configMap:
+                  .: {}
+                  f:defaultMode: {}
+                  f:name: {}
+                f:name: {}
+              k:{"name":"repo"}:
+                .: {}
+                f:emptyDir: {}
+                f:name: {}
+    manager: reconciler-manager
+    operation: Update
+    time: "2021-10-01T19:36:56Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:deployment.kubernetes.io/revision: {}
+      f:status:
+        f:availableReplicas: {}
+        f:conditions:
+          .: {}
+          k:{"type":"Available"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:observedGeneration: {}
+        f:readyReplicas: {}
+        f:replicas: {}
+        f:updatedReplicas: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2021-10-01T19:37:14Z"
+  name: root-reconciler
+  namespace: config-management-system
+  ownerReferences:
+  - apiVersion: configsync.gke.io/v1alpha1
+    blockOwnerDeletion: true
+    controller: true
+    kind: RootSync
+    name: root-sync
+    uid: 7f66c954-791a-4070-8907-c4deed6ed2f2
+  resourceVersion: "9701131"
+  uid: eb246477-85d2-408d-b02a-2015d2513b78
+spec:
+  minReadySeconds: 10
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: reconciler
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        configsync.gke.io/configmap: 1c066f72b59592dd46644f779ae1b121
+      creationTimestamp: null
+      labels:
+        app: reconciler
+        configsync.gke.io/reconciler: root-reconciler
+    spec:
+      containers:
+      - args:
+        - --v=0
+        - --repo-root=/repo
+        - --source-root=source
+        - --hydrated-root=hydrated
+        - --source-link=rev
+        - --hydrated-link=rev
+        command:
+        - /hydration-controller
+        env:
+        - name: RECONCILER_NAME
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.name
+        envFrom:
+        - configMapRef:
+            name: root-reconciler-hydration-controller
+            optional: false
+        image: gcr.io/config-management-release/hydration-controller:v1.9.0-rc.5
+        imagePullPolicy: IfNotPresent
+        name: hydration-controller
+        resources:
+          limits:
+            cpu: "1"
+            memory: 300Mi
+          requests:
+            cpu: 10m
+            memory: 100Mi
+        securityContext:
+          runAsUser: 65533
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /repo
+          name: repo
+      - args:
+        - --v=0
+        - --repo-root=/repo
+        - --git-dir=/repo/source/rev
+        - --hydrated-root=/repo/hydrated
+        - --hydrated-link=rev
+        command:
+        - /reconciler
+        env:
+        - name: RECONCILER_NAME
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.name
+        envFrom:
+        - configMapRef:
+            name: root-reconciler-reconciler
+            optional: false
+        - configMapRef:
+            name: root-reconciler-source-format
+            optional: true
+        image: gcr.io/config-management-release/reconciler:v1.9.0-rc.5
+        imagePullPolicy: IfNotPresent
+        name: reconciler
+        resources:
+          limits:
+            cpu: "1"
+            memory: 300Mi
+          requests:
+            cpu: 50m
+            memory: 100Mi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /repo
+          name: repo
+          readOnly: true
+      - args:
+        - --root=/repo/source
+        - --dest=rev
+        - --max-sync-failures=30
+        - --error-file=error.json
+        - --v=5
+        envFrom:
+        - configMapRef:
+            name: root-reconciler-git-sync
+            optional: false
+        image: gcr.io/config-management-release/git-sync:v3.3.3-gke.0__linux_amd64
+        imagePullPolicy: IfNotPresent
+        name: git-sync
+        resources:
+          limits:
+            cpu: "1"
+            memory: 200Mi
+          requests:
+            cpu: 10m
+            memory: 10Mi
+        securityContext:
+          runAsUser: 65533
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /repo
+          name: repo
+      - args:
+        - --config=/conf/otel-agent-config.yaml
+        command:
+        - /otelcol
+        image: gcr.io/config-management-release/otelcol:v0.22.0
+        imagePullPolicy: IfNotPresent
+        livenessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /
+            port: 13133
+            scheme: HTTP
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 1
+        name: otel-agent
+        ports:
+        - containerPort: 55678
+          protocol: TCP
+        - containerPort: 8888
+          protocol: TCP
+        readinessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /
+            port: 13133
+            scheme: HTTP
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 1
+        resources:
+          limits:
+            cpu: 500m
+            memory: 500Mi
+          requests:
+            cpu: 10m
+            memory: 100Mi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /conf
+          name: otel-agent-config-vol
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext:
+        fsGroup: 65533
+      serviceAccount: root-reconciler
+      serviceAccountName: root-reconciler
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - emptyDir: {}
+        name: repo
+      - configMap:
+          defaultMode: 420
+          name: otel-agent
+        name: otel-agent-config-vol
+status:
+  availableReplicas: 1
+  conditions:
+  - lastTransitionTime: "2021-10-01T19:37:14Z"
+    lastUpdateTime: "2021-10-01T19:37:14Z"
+    message: Deployment has minimum availability.
+    reason: MinimumReplicasAvailable
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2021-10-01T19:36:56Z"
+    lastUpdateTime: "2021-10-01T19:37:14Z"
+    message: ReplicaSet "root-reconciler-5fd99d57f4" has successfully progressed.
+    reason: NewReplicaSetAvailable
+    status: "True"
+    type: Progressing
+  observedGeneration: 1
+  readyReplicas: 1
+  replicas: 1
+  updatedReplicas: 1

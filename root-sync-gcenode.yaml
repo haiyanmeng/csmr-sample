@@ -6,8 +6,7 @@ metadata:
   namespace: config-management-system
 spec:
   git:
-    repo: https://source.developers.google.com/p/haiyanmeng-anthos/r/csmr-sample
-    #repo: https://source.developers.google.com/p/anthos-bare-metal-lab-1/r/root-repo-usa-market
+    repo: https://source.developers.google.com/p/haiyanmeng-gke-322517/r/csmr-sample
     branch: master
     dir: bookstore
     auth: gcenode

@@ -6,8 +6,11 @@ metadata:
   namespace: config-management-system
 spec:
   git:
-    repo: https://github.com/haiyanmeng/csmr-sample
-    dir: defaultcluster
+    repo: https://github.com/cdmello-g/test_acm
+    dir: "multirepo/acm-test/root"
+    branch: "main"
+    #revision: "cfa7a95eba171e7e6a153b4efe47741fc1175d24"
+    revision: "f14dc978f1930cebad2ec1b4d9a851f32f97c701"
     auth: none
-    #sourceFormat: unstructured
-  sourceFormat: hierarchy
+  sourceFormat: unstructured
+  #sourceFormat: hierarchy

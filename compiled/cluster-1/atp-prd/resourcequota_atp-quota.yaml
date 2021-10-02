@@ -1,0 +1,14 @@
+---
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: atp-quota
+  namespace: atp-prd
+spec:
+  hard:
+    limits.cpu: "129"
+    limits.ephemeral-storage: 20Gi
+    limits.memory: 276Gi
+    requests.cpu: "109"
+    requests.memory: 230Gi
+    requests.storage: 20Gi

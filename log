@@ -1,0 +1,8 @@
+haiyanmeng@haiyanmeng:csmr-sample$ kubectl logs deployment.apps/root-reconciler reconciler | grep StatusEvent
+I0924 21:08:04.043644       1 kpt_applier.go:144] StatusEvent for { bookstore Namespace}: type 0, status: NotFound
+I0924 21:08:04.044223       1 kpt_applier.go:144] StatusEvent for { crontabs.example.com CustomResourceDefinition.apiextensions.k8s.io}: type 0, status: NotFound
+I0924 21:08:04.044563       1 kpt_applier.go:144] StatusEvent for {bookstore cm1 ConfigMap}: type 0, status: NotFound
+I0924 21:08:04.044690       1 kpt_applier.go:144] StatusEvent for {bookstore ct3-new CronTab.example.com}: type 0, status: Unknown
+I0924 21:08:05.961826       1 kpt_applier.go:144] StatusEvent for { bookstore Namespace}: type 0, status: Current
+I0924 21:08:05.963498       1 kpt_applier.go:144] StatusEvent for { crontabs.example.com CustomResourceDefinition.apiextensions.k8s.io}: type 0, status: Current
+

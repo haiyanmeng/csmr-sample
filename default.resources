@@ -1,0 +1,37 @@
+        name: reconciler
+        resources:
+          limits:
+            cpu: "1"
+            memory: 300Mi
+          requests:
+            cpu: 150m
+            memory: 100Mi
+      - args:
+        name: git-sync
+        resources:
+          limits:
+            cpu: "1"
+            memory: 200Mi
+          requests:
+            cpu: 10m
+            memory: 10Mi
+
+
+        name: reconciler
+        resources:
+          limits:
+            cpu: "2"
+            memory: 500Mi
+          requests:
+            cpu: 150m
+            memory: 100Mi
+      - args:
+        name: git-sync
+        resources:
+          limits:
+            cpu: "1"
+            memory: 800Mi
+          requests:
+            cpu: 10m
+            memory: 10Mi
+
