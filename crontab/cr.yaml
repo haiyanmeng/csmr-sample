@@ -1,0 +1,20 @@
+apiVersion: example.com/v1beta1
+kind: CronTab
+metadata:
+  name: ct3-new
+  namespace: bookstore
+  annotations:
+    weather: "sunny"
+    dfd: dfd
+host: "local"
+port: "12"
+name: "lolo"
+gender: "m"
+aa: "ddd"
+bb: dd
+cc: ccddf
+dd: dddfdf
+ee: eeDfd
+ff: dddfd
+gg: gg
+ii: ii
