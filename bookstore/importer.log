@@ -1,0 +1,184 @@
+I1213 19:43:51.962273       1 setup.go:15] Build Version: haiyanmeng/delete-disabled-ns
+I1213 19:43:51.962552       1 http_handlers.go:33] Serving metrics on :8675/metrics
+I1213 19:43:52.676398       1 deleg.go:130] controller-runtime/metrics "level"=0 "msg"="metrics server is starting to listen"  "addr"=":8080"
+I1213 19:43:53.558586       1 controller.go:49] Policy dir: /repo/root/rev/bookstore
+I1213 19:43:55.495143       1 controller.go:165] controller-runtime/manager/controller/git-importer "level"=0 "msg"="Starting EventSource"  "source"={"Type":{"metadata":{"creationTimestamp":null},"spec":{"importTime":null},"status":{"syncTime":null}}}
+I1213 19:43:55.495960       1 controller.go:165] controller-runtime/manager/controller/git-importer "level"=0 "msg"="Starting EventSource"  "source"={"Type":{"metadata":{"creationTimestamp":null},"spec":{"importTime":null,"deleteSyncedTime":null},"status":{"syncTime":null}}}
+I1213 19:43:55.496538       1 controller.go:165] controller-runtime/manager/controller/git-importer "level"=0 "msg"="Starting EventSource"  "source"={"Type":{"metadata":{"creationTimestamp":null},"spec":{"group":"","kind":""},"status":{"status":""}}}
+I1213 19:43:55.496857       1 controller.go:165] controller-runtime/manager/controller/git-importer "level"=0 "msg"="Starting EventSource"  "source"=
+I1213 19:43:55.497005       1 controller.go:173] controller-runtime/manager/controller/git-importer "level"=0 "msg"="Starting Controller"  
+I1213 19:43:55.497232       1 controller.go:165] controller-runtime/manager/controller/restartable-manager-controller "level"=0 "msg"="Starting EventSource"  "source"=
+I1213 19:43:55.497557       1 controller.go:173] controller-runtime/manager/controller/restartable-manager-controller "level"=0 "msg"="Starting Controller"  
+I1213 19:43:55.497801       1 controller.go:207] controller-runtime/manager/controller/restartable-manager-controller "level"=0 "msg"="Starting workers"  "worker count"=1
+I1213 19:43:55.498093       1 controller.go:165] controller-runtime/manager/controller/meta-sync-resources "level"=0 "msg"="Starting EventSource"  "source"={"Type":{"metadata":{"creationTimestamp":null},"spec":{"group":"","kind":""},"status":{"status":""}}}
+I1213 19:43:55.498362       1 controller.go:165] controller-runtime/manager/controller/meta-sync-resources "level"=0 "msg"="Starting EventSource"  "source"={"Type":{"metadata":{"creationTimestamp":null},"spec":{"importTime":null,"deleteSyncedTime":null},"status":{"syncTime":null}}}
+I1213 19:43:55.498503       1 controller.go:165] controller-runtime/manager/controller/meta-sync-resources "level"=0 "msg"="Starting EventSource"  "source"=
+I1213 19:43:55.498635       1 controller.go:173] controller-runtime/manager/controller/meta-sync-resources "level"=0 "msg"="Starting Controller"  
+I1213 19:43:55.499019       1 controller.go:165] controller-runtime/manager/controller/crd-resources "level"=0 "msg"="Starting EventSource"  "source"={"Type":{"metadata":{"creationTimestamp":null},"spec":{"importTime":null},"status":{"syncTime":null}}}
+I1213 19:43:55.500045       1 controller.go:165] controller-runtime/manager/controller/crd-resources "level"=0 "msg"="Starting EventSource"  "source"={"Type":{"metadata":{"creationTimestamp":null},"spec":{"group":"","names":{"plural":"","kind":""},"scope":"","versions":null},"status":{"conditions":null,"acceptedNames":{"plural":"","kind":""},"storedVersions":null}}}
+I1213 19:43:55.500446       1 controller.go:173] controller-runtime/manager/controller/crd-resources "level"=0 "msg"="Starting Controller"  
+I1213 19:43:55.504007       1 controller.go:165] controller-runtime/manager/controller/restartable-manager-controller "level"=0 "msg"="Starting EventSource"  "source"=
+I1213 19:43:55.504417       1 controller.go:173] controller-runtime/manager/controller/restartable-manager-controller "level"=0 "msg"="Starting Controller"  
+I1213 19:43:55.504798       1 controller.go:207] controller-runtime/manager/controller/restartable-manager-controller "level"=0 "msg"="Starting workers"  "worker count"=1
+I1213 19:43:55.505168       1 controller.go:165] controller-runtime/manager/controller/repo-status "level"=0 "msg"="Starting EventSource"  "source"={"Type":{"metadata":{"creationTimestamp":null},"spec":{"importTime":null,"deleteSyncedTime":null},"status":{"syncTime":null}}}
+I1213 19:43:55.505884       1 controller.go:165] controller-runtime/manager/controller/repo-status "level"=0 "msg"="Starting EventSource"  "source"={"Type":{"metadata":{"creationTimestamp":null},"spec":{"importTime":null},"status":{"syncTime":null}}}
+I1213 19:43:55.507182       1 controller.go:165] controller-runtime/manager/controller/repo-status "level"=0 "msg"="Starting EventSource"  "source"={"Type":{"metadata":{"creationTimestamp":null},"spec":{"version":""},"status":{"source":{},"import":{"lastUpdate":null},"sync":{"lastUpdate":null}}}}
+I1213 19:43:55.507543       1 controller.go:173] controller-runtime/manager/controller/repo-status "level"=0 "msg"="Starting Controller"  
+I1213 19:43:55.505329       1 internal.go:384] controller-runtime/manager "level"=0 "msg"="starting metrics server"  "path"="/metrics"
+I1213 19:43:55.506252       1 controller.go:165] controller-runtime/manager/controller/policycontroller-annotator "level"=0 "msg"="Starting EventSource"  "source"={"Type":{"metadata":{"creationTimestamp":null},"spec":{"group":"","names":{"plural":"","kind":""},"scope":"","versions":null},"status":{"conditions":null,"acceptedNames":{"plural":"","kind":""},"storedVersions":null}}}
+I1213 19:43:55.509341       1 controller.go:173] controller-runtime/manager/controller/policycontroller-annotator "level"=0 "msg"="Starting Controller"  
+I1213 19:43:55.603974       1 controller.go:207] controller-runtime/manager/controller/crd-resources "level"=0 "msg"="Starting workers"  "worker count"=1
+I1213 19:43:55.604101       1 controller.go:207] controller-runtime/manager/controller/git-importer "level"=0 "msg"="Starting workers"  "worker count"=1
+I1213 19:43:55.604157       1 controller.go:207] controller-runtime/manager/controller/meta-sync-resources "level"=0 "msg"="Starting workers"  "worker count"=1
+I1213 19:43:55.609904       1 controller.go:207] controller-runtime/manager/controller/policycontroller-annotator "level"=0 "msg"="Starting workers"  "worker count"=1
+I1213 19:43:55.610000       1 controller.go:207] controller-runtime/manager/controller/repo-status "level"=0 "msg"="Starting workers"  "worker count"=1
+E1213 19:43:59.785530       1 reconcile.go:151] Failed to resolve config directory: 1 error(s) 
+[1] KNV9999: lstat /repo/root/rev: no such file or directory  For more information, see https://g.co/cloud/acm-errors#knv9999 
+I1213 19:43:59.803324       1 client.go:64] Created "configmanagement.gke.io/v1, Kind=Repo", "/repo"
+E1213 19:43:59.804027       1 reconcile.go:406] failed to update Repo source status: KNV2008: tried to update resource which does not exist: Repo.configmanagement.gke.io "repo" not found
+
+metadata.name: repo
+group:
+version: 
+kind: 
+
+For more information, see https://g.co/cloud/acm-errors#knv2008
+I1213 19:44:04.785114       1 reconcile.go:203] Resolved config dir: {/repo/root/6503e8816289afd9cfa46ade4a6fc53b5de9ac75/bookstore}. Polling config dir: /repo/root/rev/bookstore
+I1213 19:44:04.798153       1 client.go:168] Updated "configmanagement.gke.io/v1, Kind=Repo", "/repo" from ResourceVersion 12801359 to 12801407
+I1213 19:44:06.467167       1 reconcile.go:241] listing policy files in /repo/root/6503e8816289afd9cfa46ade4a6fc53b5de9ac75/bookstore
+I1213 19:44:07.391913       1 reconcile.go:300] Importer state initialized at git revision /repo/root/6503e8816289afd9cfa46ade4a6fc53b5de9ac75. Unverified file list: test-ns.yaml,cm.yaml,config.yaml,config1.yaml,test-ns.yaml,test-ns.yaml
+W1213 19:44:07.391988       1 reconcile.go:366] Importer did not parse any cluster-scoped resources in git repo. Cluster currently has 0 resources, so this will proceed.
+I1213 19:44:08.102847       1 repostatus.go:193] RepoStatus import token at "", but 1 commits are unreconciled. RepoStatus sync token will remain at "".
+I1213 19:44:08.104010       1 client.go:64] Created "configmanagement.gke.io/v1, Kind=NamespaceConfig", "/test-ns"
+I1213 19:44:08.114479       1 client.go:168] Updated "configmanagement.gke.io/v1, Kind=Repo", "/repo" from ResourceVersion 12801407 to 12801432
+I1213 19:44:08.114613       1 repostatus.go:193] RepoStatus import token at "", but 1 commits are unreconciled. RepoStatus sync token will remain at "".
+I1213 19:44:08.115325       1 repostatus.go:193] RepoStatus import token at "", but 1 commits are unreconciled. RepoStatus sync token will remain at "".
+I1213 19:44:08.115793       1 client.go:64] Created "configmanagement.gke.io/v1, Kind=NamespaceConfig", "/bookstore"
+I1213 19:44:08.115816       1 differ.go:86] NamespaceConfig operations: create 2, update 0, delete 0
+I1213 19:44:08.126063       1 repostatus.go:193] RepoStatus import token at "", but 1 commits are unreconciled. RepoStatus sync token will remain at "".
+I1213 19:44:08.126487       1 client.go:64] Created "configmanagement.gke.io/v1, Kind=ClusterConfig", "/config-management-cluster-config"
+I1213 19:44:08.131150       1 repostatus.go:193] RepoStatus import token at "", but 1 commits are unreconciled. RepoStatus sync token will remain at "".
+I1213 19:44:08.132685       1 client.go:64] Created "configmanagement.gke.io/v1, Kind=ClusterConfig", "/config-management-crd-cluster-config"
+I1213 19:44:08.138900       1 client.go:64] Created "configmanagement.gke.io/v1, Kind=Sync", "/configmap"
+I1213 19:44:08.144141       1 client.go:64] Created "configmanagement.gke.io/v1, Kind=Sync", "/deployment.apps"
+I1213 19:44:08.144278       1 differ.go:218] Sync operations: 0 updates, 2 creates, 0 deletes
+I1213 19:44:08.151373       1 repostatus.go:193] RepoStatus import token at "6503e8816289afd9cfa46ade4a6fc53b5de9ac75", but 1 commits are unreconciled. RepoStatus sync token will remain at "".
+I1213 19:44:08.151911       1 client.go:168] Updated "configmanagement.gke.io/v1, Kind=Repo", "/repo" from ResourceVersion 12801432 to 12801439
+I1213 19:44:08.152116       1 reconcile.go:203] Resolved config dir: {/repo/root/6503e8816289afd9cfa46ade4a6fc53b5de9ac75/bookstore}. Polling config dir: /repo/root/rev/bookstore
+W1213 19:44:08.158578       1 client.go:166] ResourceVersion for "configmanagement.gke.io/v1, Kind=Repo", "/repo" did not change during update (noop), updateFn should have indicated no update needed
+I1213 19:44:08.239308       1 reconcile.go:237] Triggering restart due to external CRD change
+I1213 19:44:08.287981       1 repostatus.go:193] RepoStatus import token at "6503e8816289afd9cfa46ade4a6fc53b5de9ac75", but 1 commits are unreconciled. RepoStatus sync token will remain at "".
+I1213 19:44:08.289245       1 client.go:168] Updated "configmanagement.gke.io/v1, Kind=ClusterConfig", "/config-management-crd-cluster-config" from ResourceVersion 12801436 to 12801445
+I1213 19:44:08.775147       1 reconcile.go:241] listing policy files in /repo/root/6503e8816289afd9cfa46ade4a6fc53b5de9ac75/bookstore
+W1213 19:44:08.814401       1 reconcile.go:366] Importer did not parse any cluster-scoped resources in git repo. Cluster currently has 0 resources, so this will proceed.
+I1213 19:44:09.842687       1 request.go:668] Waited for 1.017089548s due to client-side throttling, not priority and fairness, request: GET:https://10.8.0.1:443/apis/authorization.k8s.io/v1beta1?timeout=5s
+I1213 19:44:09.897450       1 manager.go:128] Starting subManager
+I1213 19:44:09.898030       1 controller.go:165] controller-runtime/manager/controller/namespaceconfig-resources "level"=0 "msg"="Starting EventSource"  "source"={"Type":{"metadata":{"creationTimestamp":null},"spec":{"importTime":null,"deleteSyncedTime":null},"status":{"syncTime":null}}}
+I1213 19:44:09.898232       1 controller.go:165] controller-runtime/manager/controller/namespaceconfig-resources "level"=0 "msg"="Starting EventSource"  "source"={"Type":{"metadata":{"creationTimestamp":null},"spec":{},"status":{}}}
+I1213 19:44:09.898266       1 controller.go:173] controller-runtime/manager/controller/namespaceconfig-resources "level"=0 "msg"="Starting Controller"  
+I1213 19:44:09.898641       1 controller.go:165] controller-runtime/manager/controller/clusterconfig-resources "level"=0 "msg"="Starting EventSource"  "source"={"Type":{"metadata":{"creationTimestamp":null},"spec":{"importTime":null},"status":{"syncTime":null}}}
+I1213 19:44:09.898673       1 controller.go:173] controller-runtime/manager/controller/clusterconfig-resources "level"=0 "msg"="Starting Controller"  
+I1213 19:44:09.999641       1 controller.go:207] controller-runtime/manager/controller/clusterconfig-resources "level"=0 "msg"="Starting workers"  "worker count"=1
+I1213 19:44:09.999850       1 controller.go:207] controller-runtime/manager/controller/namespaceconfig-resources "level"=0 "msg"="Starting workers"  "worker count"=1
+I1213 19:44:10.014425       1 repostatus.go:193] RepoStatus import token at "6503e8816289afd9cfa46ade4a6fc53b5de9ac75", but 1 commits are unreconciled. RepoStatus sync token will remain at "".
+I1213 19:44:10.014943       1 client.go:168] Updated "configmanagement.gke.io/v1, Kind=ClusterConfig", "/config-management-cluster-config" from ResourceVersion 12801435 to 12801452
+W1213 19:44:10.023632       1 namespaceconfig.go:230] NamespaceConfig reconciler encountered GroupKinds that were not present in a sync: ConfigMap. Waiting for reconciler restart
+W1213 19:44:10.035904       1 namespaceconfig.go:230] NamespaceConfig reconciler encountered GroupKinds that were not present in a sync: ConfigMap, Deployment.apps. Waiting for reconciler restart
+W1213 19:44:10.042181       1 namespaceconfig.go:230] NamespaceConfig reconciler encountered GroupKinds that were not present in a sync: ConfigMap. Waiting for reconciler restart
+W1213 19:44:10.047791       1 namespaceconfig.go:230] NamespaceConfig reconciler encountered GroupKinds that were not present in a sync: ConfigMap, Deployment.apps. Waiting for reconciler restart
+I1213 19:44:10.797941       1 differ.go:86] NamespaceConfig operations: create 0, update 0, delete 0
+I1213 19:44:10.797997       1 differ.go:218] Sync operations: 0 updates, 0 creates, 0 deletes
+I1213 19:44:10.807160       1 repostatus.go:193] RepoStatus import token at "6503e8816289afd9cfa46ade4a6fc53b5de9ac75", but 1 commits are unreconciled. RepoStatus sync token will remain at "".
+I1213 19:44:10.807576       1 client.go:168] Updated "configmanagement.gke.io/v1, Kind=Repo", "/repo" from ResourceVersion 12801439 to 12801469
+I1213 19:44:10.807852       1 reconcile.go:203] Resolved config dir: {/repo/root/6503e8816289afd9cfa46ade4a6fc53b5de9ac75/bookstore}. Polling config dir: /repo/root/rev/bookstore
+W1213 19:44:10.822366       1 client.go:166] ResourceVersion for "configmanagement.gke.io/v1, Kind=Repo", "/repo" did not change during update (noop), updateFn should have indicated no update needed
+I1213 19:44:11.343263       1 reconcile.go:241] listing policy files in /repo/root/6503e8816289afd9cfa46ade4a6fc53b5de9ac75/bookstore
+W1213 19:44:11.378292       1 reconcile.go:366] Importer did not parse any cluster-scoped resources in git repo. Cluster currently has 0 resources, so this will proceed.
+I1213 19:44:11.507027       1 manager.go:100] Stopping SubManager
+I1213 19:44:11.507240       1 controller.go:227] controller-runtime/manager/controller/namespaceconfig-resources "level"=0 "msg"="Shutdown signal received, waiting for all workers to finish"  
+I1213 19:44:11.507818       1 controller.go:229] controller-runtime/manager/controller/namespaceconfig-resources "level"=0 "msg"="All workers finished"  
+I1213 19:44:11.507260       1 controller.go:227] controller-runtime/manager/controller/clusterconfig-resources "level"=0 "msg"="Shutdown signal received, waiting for all workers to finish"  
+I1213 19:44:11.507839       1 controller.go:229] controller-runtime/manager/controller/clusterconfig-resources "level"=0 "msg"="All workers finished"  
+I1213 19:44:12.590892       1 manager.go:128] Starting subManager
+I1213 19:44:12.591726       1 controller.go:165] controller-runtime/manager/controller/namespaceconfig-resources "level"=0 "msg"="Starting EventSource"  "source"={"Type":{"metadata":{"creationTimestamp":null},"spec":{"importTime":null,"deleteSyncedTime":null},"status":{"syncTime":null}}}
+I1213 19:44:12.591772       1 controller.go:165] controller-runtime/manager/controller/namespaceconfig-resources "level"=0 "msg"="Starting EventSource"  "source"={"Type":{"metadata":{"creationTimestamp":null},"spec":{},"status":{}}}
+I1213 19:44:12.591739       1 controller.go:165] controller-runtime/manager/controller/clusterconfig-resources "level"=0 "msg"="Starting EventSource"  "source"={"Type":{"metadata":{"creationTimestamp":null},"spec":{"importTime":null},"status":{"syncTime":null}}}
+I1213 19:44:12.592599       1 controller.go:173] controller-runtime/manager/controller/clusterconfig-resources "level"=0 "msg"="Starting Controller"  
+I1213 19:44:12.594561       1 controller.go:165] controller-runtime/manager/controller/namespaceconfig-resources "level"=0 "msg"="Starting EventSource"  "source"={"Type":{"metadata":{"creationTimestamp":null},"spec":{"selector":null,"template":{"metadata":{"creationTimestamp":null},"spec":{"containers":null}},"strategy":{}},"status":{}}}
+I1213 19:44:12.594687       1 controller.go:165] controller-runtime/manager/controller/namespaceconfig-resources "level"=0 "msg"="Starting EventSource"  "source"={"Type":{"metadata":{"creationTimestamp":null}}}
+I1213 19:44:12.594742       1 controller.go:173] controller-runtime/manager/controller/namespaceconfig-resources "level"=0 "msg"="Starting Controller"  
+I1213 19:44:12.597302       1 client.go:168] Updated "configmanagement.gke.io/v1, Kind=Sync", "/configmap" from ResourceVersion 12801437 to 12801484
+I1213 19:44:12.603435       1 client.go:168] Updated "configmanagement.gke.io/v1, Kind=Sync", "/deployment.apps" from ResourceVersion 12801438 to 12801485
+I1213 19:44:12.696039       1 controller.go:207] controller-runtime/manager/controller/namespaceconfig-resources "level"=0 "msg"="Starting workers"  "worker count"=1
+I1213 19:44:12.696989       1 controller.go:207] controller-runtime/manager/controller/clusterconfig-resources "level"=0 "msg"="Starting workers"  "worker count"=1
+I1213 19:44:12.931397       1 client.go:168] Updated "configmanagement.gke.io/v1, Kind=NamespaceConfig", "/test-ns" from ResourceVersion 12801430 to 12801488
+I1213 19:44:12.932103       1 repostatus.go:193] RepoStatus import token at "6503e8816289afd9cfa46ade4a6fc53b5de9ac75", but 1 commits are unreconciled. RepoStatus sync token will remain at "".
+I1213 19:44:12.966223       1 repostatus.go:188] All commits are reconciled, updating RepoStatus sync token to "6503e8816289afd9cfa46ade4a6fc53b5de9ac75".
+I1213 19:44:12.966233       1 client.go:168] Updated "configmanagement.gke.io/v1, Kind=NamespaceConfig", "/bookstore" from ResourceVersion 12801433 to 12801491
+I1213 19:44:12.974928       1 client.go:168] Updated "configmanagement.gke.io/v1, Kind=Repo", "/repo" from ResourceVersion 12801469 to 12801493
+I1213 19:44:13.495251       1 differ.go:86] NamespaceConfig operations: create 0, update 0, delete 0
+I1213 19:44:13.495404       1 differ.go:218] Sync operations: 0 updates, 0 creates, 0 deletes
+I1213 19:44:13.501986       1 client.go:168] Updated "configmanagement.gke.io/v1, Kind=Repo", "/repo" from ResourceVersion 12801493 to 12801497
+I1213 19:44:13.502385       1 reconcile.go:203] Resolved config dir: {/repo/root/6503e8816289afd9cfa46ade4a6fc53b5de9ac75/bookstore}. Polling config dir: /repo/root/rev/bookstore
+W1213 19:44:13.507446       1 client.go:166] ResourceVersion for "configmanagement.gke.io/v1, Kind=Repo", "/repo" did not change during update (noop), updateFn should have indicated no update needed
+I1213 19:44:14.019281       1 reconcile.go:241] listing policy files in /repo/root/6503e8816289afd9cfa46ade4a6fc53b5de9ac75/bookstore
+W1213 19:44:14.055557       1 reconcile.go:366] Importer did not parse any cluster-scoped resources in git repo. Cluster currently has 0 resources, so this will proceed.
+I1213 19:44:16.195209       1 differ.go:86] NamespaceConfig operations: create 0, update 0, delete 0
+I1213 19:44:16.195263       1 differ.go:218] Sync operations: 0 updates, 0 creates, 0 deletes
+I1213 19:44:16.201841       1 client.go:168] Updated "configmanagement.gke.io/v1, Kind=Repo", "/repo" from ResourceVersion 12801497 to 12801522
+I1213 19:44:54.785600       1 reconcile.go:203] Resolved config dir: {/repo/root/9dce1eea17c0a27b0749a544a1d4f9b62d19f21c/bookstore}. Polling config dir: /repo/root/rev/bookstore
+I1213 19:44:54.803115       1 client.go:168] Updated "configmanagement.gke.io/v1, Kind=Repo", "/repo" from ResourceVersion 12801522 to 12801784
+I1213 19:44:54.954584       1 reconcile.go:241] listing policy files in /repo/root/9dce1eea17c0a27b0749a544a1d4f9b62d19f21c/bookstore
+I1213 19:44:55.001469       1 reconcile.go:302] Importer state updated to git revision /repo/root/9dce1eea17c0a27b0749a544a1d4f9b62d19f21c. Unverified files list: test-ns.yaml,cm.yaml,config.yaml,config1.yaml,test-ns.yaml,test-ns.yaml
+W1213 19:44:55.001737       1 reconcile.go:366] Importer did not parse any cluster-scoped resources in git repo. Cluster currently has 0 resources, so this will proceed.
+I1213 19:44:55.720023       1 repostatus.go:193] RepoStatus import token at "6503e8816289afd9cfa46ade4a6fc53b5de9ac75", but 1 commits are unreconciled. RepoStatus sync token will remain at "6503e8816289afd9cfa46ade4a6fc53b5de9ac75".
+I1213 19:44:55.721837       1 client.go:168] Updated "configmanagement.gke.io/v1, Kind=NamespaceConfig", "/test-ns" from ResourceVersion 12801488 to 12801788
+I1213 19:44:55.733492       1 client.go:168] Updated "configmanagement.gke.io/v1, Kind=NamespaceConfig", "/test-ns" from ResourceVersion 12801788 to 12801789
+I1213 19:44:55.735843       1 differ.go:86] NamespaceConfig operations: create 0, update 1, delete 0
+I1213 19:44:55.735924       1 differ.go:218] Sync operations: 0 updates, 0 creates, 0 deletes
+I1213 19:44:55.737237       1 client.go:168] Updated "configmanagement.gke.io/v1, Kind=Repo", "/repo" from ResourceVersion 12801784 to 12801790
+I1213 19:44:55.737385       1 repostatus.go:193] RepoStatus import token at "6503e8816289afd9cfa46ade4a6fc53b5de9ac75", but 1 commits are unreconciled. RepoStatus sync token will remain at "6503e8816289afd9cfa46ade4a6fc53b5de9ac75".
+I1213 19:44:55.772073       1 client.go:168] Updated "/v1, Kind=Namespace", "/test-ns" from ResourceVersion 12801454 to 12801791
+I1213 19:44:55.808106       1 client.go:168] Updated "/v1, Kind=ConfigMap", "test-ns/cm1" from ResourceVersion 12801486 to 12801793
+I1213 19:44:55.820471       1 client.go:168] Updated "/v1, Kind=ConfigMap", "test-ns/cm2" from ResourceVersion 12801487 to 12801794
+I1213 19:44:55.831619       1 client.go:168] Updated "configmanagement.gke.io/v1, Kind=NamespaceConfig", "/test-ns" from ResourceVersion 12801789 to 12801795
+I1213 19:44:55.896822       1 client.go:168] Updated "configmanagement.gke.io/v1, Kind=Repo", "/repo" from ResourceVersion 12801790 to 12801796
+I1213 19:44:55.897532       1 reconcile.go:203] Resolved config dir: {/repo/root/9dce1eea17c0a27b0749a544a1d4f9b62d19f21c/bookstore}. Polling config dir: /repo/root/rev/bookstore
+W1213 19:44:55.952924       1 client.go:166] ResourceVersion for "configmanagement.gke.io/v1, Kind=NamespaceConfig", "/test-ns" did not change during update (noop), updateFn should have indicated no update needed
+W1213 19:44:56.015429       1 client.go:166] ResourceVersion for "configmanagement.gke.io/v1, Kind=Repo", "/repo" did not change during update (noop), updateFn should have indicated no update needed
+W1213 19:44:56.016062       1 client.go:166] ResourceVersion for "configmanagement.gke.io/v1, Kind=Repo", "/repo" did not change during update (noop), updateFn should have indicated no update needed
+I1213 19:44:56.016359       1 repostatus.go:188] All commits are reconciled, updating RepoStatus sync token to "9dce1eea17c0a27b0749a544a1d4f9b62d19f21c".
+I1213 19:44:56.023073       1 client.go:168] Updated "configmanagement.gke.io/v1, Kind=Repo", "/repo" from ResourceVersion 12801796 to 12801797
+I1213 19:44:56.023770       1 repostatus.go:188] All commits are reconciled, updating RepoStatus sync token to "9dce1eea17c0a27b0749a544a1d4f9b62d19f21c".
+W1213 19:44:56.136865       1 client.go:166] ResourceVersion for "configmanagement.gke.io/v1, Kind=Repo", "/repo" did not change during update (noop), updateFn should have indicated no update needed
+I1213 19:44:56.159201       1 reconcile.go:241] listing policy files in /repo/root/9dce1eea17c0a27b0749a544a1d4f9b62d19f21c/bookstore
+W1213 19:44:56.206126       1 reconcile.go:366] Importer did not parse any cluster-scoped resources in git repo. Cluster currently has 0 resources, so this will proceed.
+I1213 19:44:57.252660       1 request.go:668] Waited for 1.040920385s due to client-side throttling, not priority and fairness, request: GET:https://10.8.0.1:443/apis/cloud.google.com/v1beta1?timeout=5s
+I1213 19:44:58.405796       1 differ.go:86] NamespaceConfig operations: create 0, update 0, delete 0
+I1213 19:44:58.405851       1 differ.go:218] Sync operations: 0 updates, 0 creates, 0 deletes
+I1213 19:44:58.412204       1 client.go:168] Updated "configmanagement.gke.io/v1, Kind=Repo", "/repo" from ResourceVersion 12801797 to 12801812
+I1213 19:45:49.785002       1 reconcile.go:203] Resolved config dir: {/repo/root/65a265550f67cf578cb626692493d1d30d906302/bookstore}. Polling config dir: /repo/root/rev/bookstore
+I1213 19:45:49.826123       1 client.go:168] Updated "configmanagement.gke.io/v1, Kind=Repo", "/repo" from ResourceVersion 12801812 to 12802141
+I1213 19:45:49.959892       1 reconcile.go:241] listing policy files in /repo/root/65a265550f67cf578cb626692493d1d30d906302/bookstore
+I1213 19:45:50.009164       1 reconcile.go:302] Importer state updated to git revision /repo/root/65a265550f67cf578cb626692493d1d30d906302. Unverified files list: cm.yaml,config.yaml,config1.yaml
+W1213 19:45:50.009219       1 reconcile.go:366] Importer did not parse any cluster-scoped resources in git repo. Cluster currently has 0 resources, so this will proceed.
+I1213 19:45:50.714147       1 differ.go:86] NamespaceConfig operations: create 0, update 0, delete 0
+I1213 19:45:50.714208       1 differ.go:218] Sync operations: 0 updates, 0 creates, 0 deletes
+I1213 19:45:50.721200       1 repostatus.go:188] All commits are reconciled, updating RepoStatus sync token to "65a265550f67cf578cb626692493d1d30d906302".
+I1213 19:45:50.721428       1 client.go:168] Updated "configmanagement.gke.io/v1, Kind=Repo", "/repo" from ResourceVersion 12802141 to 12802142
+I1213 19:45:50.726083       1 client.go:168] Updated "configmanagement.gke.io/v1, Kind=Repo", "/repo" from ResourceVersion 12802142 to 12802143
+I1213 19:45:54.021509       1 reconcile.go:203] Resolved config dir: {/repo/root/65a265550f67cf578cb626692493d1d30d906302/bookstore}. Polling config dir: /repo/root/rev/bookstore
+W1213 19:45:54.036078       1 client.go:166] ResourceVersion for "configmanagement.gke.io/v1, Kind=Repo", "/repo" did not change during update (noop), updateFn should have indicated no update needed
+I1213 19:45:54.173565       1 reconcile.go:241] listing policy files in /repo/root/65a265550f67cf578cb626692493d1d30d906302/bookstore
+W1213 19:45:54.213730       1 reconcile.go:366] Importer did not parse any cluster-scoped resources in git repo. Cluster currently has 0 resources, so this will proceed.
+I1213 19:45:54.918032       1 differ.go:86] NamespaceConfig operations: create 0, update 0, delete 0
+I1213 19:45:54.918084       1 differ.go:218] Sync operations: 0 updates, 0 creates, 0 deletes
+I1213 19:45:54.924447       1 client.go:168] Updated "configmanagement.gke.io/v1, Kind=Repo", "/repo" from ResourceVersion 12802143 to 12802179
+I1213 19:45:55.871582       1 request.go:668] Waited for 1.046559764s due to client-side throttling, not priority and fairness, request: GET:https://10.8.0.1:443/apis/authorization.k8s.io/v1beta1?timeout=5s
+I1213 19:45:59.465669       1 reconcile.go:203] Resolved config dir: {/repo/root/65a265550f67cf578cb626692493d1d30d906302/bookstore}. Polling config dir: /repo/root/rev/bookstore
+W1213 19:45:59.476173       1 client.go:166] ResourceVersion for "configmanagement.gke.io/v1, Kind=Repo", "/repo" did not change during update (noop), updateFn should have indicated no update needed
+I1213 19:45:59.613822       1 reconcile.go:241] listing policy files in /repo/root/65a265550f67cf578cb626692493d1d30d906302/bookstore
+W1213 19:45:59.645756       1 reconcile.go:366] Importer did not parse any cluster-scoped resources in git repo. Cluster currently has 0 resources, so this will proceed.
+I1213 19:46:00.350905       1 differ.go:86] NamespaceConfig operations: create 0, update 0, delete 0
+I1213 19:46:00.351232       1 differ.go:218] Sync operations: 0 updates, 0 creates, 0 deletes
+I1213 19:46:00.358121       1 client.go:168] Updated "configmanagement.gke.io/v1, Kind=Repo", "/repo" from ResourceVersion 12802179 to 12802207
