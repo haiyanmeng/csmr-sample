@@ -8,11 +8,3 @@ kind: ConfigMap
 metadata:
   name: cm1
   namespace: test-ns
----
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: cm2
-  namespace: test-ns
-  annotations:
-    configmanagement.gke.io/managed: disabled
