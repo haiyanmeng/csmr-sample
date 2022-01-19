@@ -3,6 +3,8 @@ kind: ConfigMap
 metadata:
   name: cm-a
   namespace: bookstore
+  annotations:
+    #configmanagement.gke.io/managed: disabled
 ---
 apiVersion: v1
 kind: ConfigMap
