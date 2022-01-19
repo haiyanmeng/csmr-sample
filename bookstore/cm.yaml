@@ -1,5 +1,13 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: cm2
+  name: cm-a
   namespace: bookstore
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cm-b
+  namespace: bookstore
+  annotations:
+    config.kubernetes.io/depends-on: /namespaces/bookstore/ConfigMap/cm-a
