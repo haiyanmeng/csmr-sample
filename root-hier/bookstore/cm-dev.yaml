@@ -3,5 +3,3 @@ kind: ConfigMap
 metadata:
   name: cm-dev
   namespace: bookstore
-  annotations:
-    configmanagement.gke.io/cluster-selector: cluster-selector-dev
