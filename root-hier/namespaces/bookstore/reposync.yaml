@@ -11,9 +11,8 @@ spec:
     - containerName: "reconciler"
       memoryLimit: 1000Mi
   git:
-    repo: https://github.com/haiyanmeng/csmr-sample
-    branch: master
-    dir: bookstore
+    repo: https://github.com/haiyanmeng/bookstore-ns-repo
+    branch: main
     auth: none
     #secretRef:
     #name: git-creds
