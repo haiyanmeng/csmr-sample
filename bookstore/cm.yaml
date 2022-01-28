@@ -12,7 +12,8 @@ metadata:
   name: cm-b
   namespace: bookstore
   annotations:
-          #    config.kubernetes.io/depends-on: /namespaces/bookstore/ConfigMap/cm-a
+    config.kubernetes.io/depends-on: /namespaces/bookstore/ConfigMap/cm-a
+    friday: summer
 ---
 apiVersion: v1
 kind: ConfigMap
