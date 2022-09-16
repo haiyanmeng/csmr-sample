@@ -3,3 +3,9 @@ kind: ConfigMap
 metadata:
   name: cm-dev
   namespace: bookstore
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cm-dev1
+  namespace: bookstore
