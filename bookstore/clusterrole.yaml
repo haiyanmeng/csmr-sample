@@ -1,0 +1,11 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: haiyanmeng-test1
+  annotations:
+    configmanagement.gke.io/managed: disabled
+aggregationRule:
+  clusterRoleSelectors:
+  - matchLabels:
+      rbac.example.com/clusterrole-haiyanmeng: "true"
+rules: []
