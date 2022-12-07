@@ -8,5 +8,3 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: cm-dev1
-  annotations:
-    configmanagement.gke.io/test: hello
