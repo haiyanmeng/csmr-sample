@@ -14,7 +14,7 @@ spec:
         type: Delete
       condition:
         age: 7
-        withState: ANY
+        # withState: ANY
   versioning:
     enabled: true
   cors:
