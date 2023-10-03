@@ -6,10 +6,6 @@ metadata:
   namespace: bookstore
 spec:
   sourceFormat: unstructured
-  override:
-    resources:
-    - containerName: "reconciler"
-      memoryLimit: 1000Mi
   git:
     repo: https://github.com/haiyanmeng/bookstore-ns-repo
     branch: main
